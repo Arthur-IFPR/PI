@@ -53,3 +53,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     }
+
+.wireframeimage1 {
+    border: gray;
+    border-width: 7px;
+    border-style: solid;
+}
