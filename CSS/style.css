@@ -20,6 +20,7 @@ header > div, header > nav {
 
 .logo {
     text-align: center;
+    font-size: 2rem;
 }
 
 .navbuttons {
