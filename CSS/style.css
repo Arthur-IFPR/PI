@@ -1,6 +1,12 @@
+
 body, html {
     margin: 0px;
     padding: 0px;
+}
+
+.dark-mode {
+    background-color: rgb(41, 41, 41);
+    color: whitesmoke;
 }
 
 header{
@@ -27,4 +33,52 @@ header > div, header > nav {
     text-align: end;
 }
 
+/* botão de dark mode */
+/* para fins de clareza, "botão" se refere ao input, e "slider" ao visual do botão.*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 29px;
+}
 
+.switch input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.darkmodeslider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.5s;
+    -webkit-transition: .4s;
+    border-radius: 20px;
+}
+
+.darkmodeslider:before { /* esse aqui é a bolinha do slider*/
+    position:absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+input:checked + .darkmodeslider { /* botão, quando marcado e o slider logo após*/
+    background-color: lightgreen;
+}
+
+input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha do slider */
+    transform: translateX(26px); /* quando botão é desmarcado, bolinha do slider volta à posição original (por ser absoluta)*/
+    -webkit-transform: translateX(26px);
+    background-color: rgb(56, 56, 56);
+}
