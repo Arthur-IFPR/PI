@@ -1,6 +1,14 @@
 function toggleDarkMode() {
-    const element = document.querySelectorAll(".darkable")
-    element.classList.toggle("dark-mode")
-    console.log(element)
+    console.log("am i cooked")
+
+    const elements = document.querySelectorAll(".darkable")
+    elements.forEach(element => {
+        element.className.replace(".dark-mode")
+        console.log(element)
+        console.log('its over')
+        console.log(element.className)
+    });
+    console.log(elements.length)
+    
     
 }
