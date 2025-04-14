@@ -10,6 +10,10 @@
     transition: 0.2s;
 }
 
+.darkable {
+    transition: 0.2s;
+}
+
 header{
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
