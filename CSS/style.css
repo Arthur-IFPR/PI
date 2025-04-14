@@ -1,5 +1,5 @@
 
-body, html {
+* {
     margin: 0px;
     padding: 0px;
 }
@@ -7,6 +7,7 @@ body, html {
 .dark-mode {
     background-color: #292929;
     color: whitesmoke;
+    transition: 0.2s;
 }
 
 header{
@@ -81,8 +82,4 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     transform: translateX(26px); /* quando botão é desmarcado, bolinha do slider volta à posição original (por ser absoluta)*/
     -webkit-transform: translateX(26px);
     background-color: rgb(56, 56, 56);
-}
-
-.randomclass {
-    background-color: red;
 }
