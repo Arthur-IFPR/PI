@@ -94,3 +94,9 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     position: relative;
     top: 8px;
 }
+
+.githublogo {
+    width: 30px;
+    position: relative;
+    left: 15%;
+}
