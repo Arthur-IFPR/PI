@@ -87,3 +87,10 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     -webkit-transform: translateX(26px);
     background-color: rgb(56, 56, 56);
 }
+
+/* Logo */
+.logoimage {
+    height: 30px;
+    position: relative;
+    top: 8px;
+}
