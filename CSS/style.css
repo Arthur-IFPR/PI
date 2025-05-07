@@ -128,16 +128,21 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 
 .introtext {
     display: flex;
+
     justify-content: center;
     align-items: center;
-    height: 100%;
+    
     text-align: left;
+
+    height: 100%;
+
     padding: 20px;
     padding-top: 75px;
 }
 
 .introimg {
     display: flex;
+
     text-align: center;
 }
 
@@ -149,17 +154,22 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 
 .precard-text {
     margin-top: 20px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+
     display: flex;
+
     flex-direction: column;
     gap: 16px;
+    
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
 }
 
 .cards {
     align-items: center;
     justify-content: space-around;
+
     margin-top: 20px;
 }
 
@@ -176,11 +186,16 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 .card {
     width: 320px;
     height: 200px;
-    margin: 20px;
+
+    margin: 25px;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     flex-direction: column;
+
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-weight: 750;
@@ -194,7 +209,9 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 
 .card > img {
     transition-duration: 0.3s;
+
     cursor: pointer;
+
     width: 80%;
 }
 
@@ -206,15 +223,62 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    position: absolute;
+
+    position: fixed;
+
+    z-index: 1;
+
     top: 0px;
+
     width: 100vw;
     height: 100vh;
+
+
 }
 
 .modal {
-    height: 200px;
-    width: 200px;
+    min-height: 450px;
+    min-width: 500px;
+    
+    height: 80%;
+    width: 80%;
 
+    overflow: auto;
+
+    border-radius: 1rem;
     background-color: white;
+    
+    padding: 2rem;
+}
+
+.closeButtonContainer {
+    display: flex;
+    width: 100%;
+
+    justify-content: end;
+}
+
+.closeButton {
+    display: flex;
+
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 35px;
+    height: 35px;
+
+    user-select: none;
+
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.closeButton p {
+    position: relative;
+    bottom: 2px;
 }
