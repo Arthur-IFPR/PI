@@ -251,6 +251,10 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     padding: 2rem;
 }
 
+.hide-modal {
+    display: none;
+}
+
 .closeButtonContainer {
     display: flex;
     width: 100%;
