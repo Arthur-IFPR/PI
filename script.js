@@ -6,6 +6,7 @@ function toggleDarkMode() {
         const currentClass = element.className
         element.classList.toggle('dark-mode')
     });
+    const modals = document.querySelectorAll(".modal")
     darkmode = !darkmode;
 }
 
@@ -20,9 +21,7 @@ cards.forEach(element => {
 
 
 function toggleModal(cardTopic) {
-    console.log(cardTopic)
     const modal = document.querySelector(`#card-${cardTopic}`);
-    console.log(modal)
     modal.classList.toggle('hide-modal');
 }
 
