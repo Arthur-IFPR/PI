@@ -1,4 +1,5 @@
 let darkmode = false;
+const modals = document.querySelectorAll(".modal")
 
 function toggleDarkMode() {
     const elements = document.querySelectorAll(".darkable")
@@ -6,7 +7,10 @@ function toggleDarkMode() {
         const currentClass = element.className
         element.classList.toggle('dark-mode')
     });
-    const modals = document.querySelectorAll(".modal")
+
+    modals.forEach(modal => {
+        modal.classList.toggle('dark-modal');
+    })
     darkmode = !darkmode;
 }
 
