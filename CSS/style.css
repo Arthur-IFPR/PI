@@ -114,16 +114,16 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     margin: 0px;
     font-size: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .intro div {
     font-size: 20px;
-    width: 50%;
+    width: 40%;
     height: 100%;
     box-sizing: border-box;
     display: inline-block;
-    vertical-align: top
+    vertical-align: top;
 }
 
 .introtext {
@@ -261,6 +261,41 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     display: none;
 }
 
+/* FOOTER */
+footer {
+    height: 90px;
+    width: 100%;
+    background-color: black;
+    margin-top: 70px;
+
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer div {
+    width: 50%;
+}
+
+#footerbuttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footerbuttons a {
+    color: white;
+    font-size: 20px;
+}
+
+#footertext {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .closeButtonContainer {
     display: flex;
     width: 100%;
@@ -288,7 +323,15 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     cursor: pointer;
 }
 
-.closeButton p {
+.closeButton img {
     position: relative;
-    bottom: 2px;
+    bottom: 1px;
+    width: 70%;
+    height: 70%;
+}
+
+#maintitle {
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
