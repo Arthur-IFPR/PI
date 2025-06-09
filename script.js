@@ -1,6 +1,6 @@
+alert('O PDK_BOT é baitola, mas não o zoe, ele é gente boa')
 let darkmode = false;
 const modals = document.querySelectorAll(".modal")
-
 function toggleDarkMode() {
     const elements = document.querySelectorAll(".darkable")
     elements.forEach(element => {

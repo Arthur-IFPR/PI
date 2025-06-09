@@ -1,21 +1,33 @@
-
+/* this is the css file*/
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0px; /*sets margin to 0 px (pixels) in the screen (the magic mirror)*/
+    padding: 0px; /*sets padding to 0 px (pixels) in the screen (the magic mirror)*/
 }
 
+/* dark-mode */
 .dark-mode {
-    background-color: #292929;
-    color: whitesmoke;
-    transition: 0.2s;
+    background-color: #292929; /* sets the backgtround color of the dark-mode to #292929 (hex color code(color code that does hex)) */
+    color: whitesmoke; /* sets color to whitesmoke*/
+    transition: 0.2s; /*sets transition to 0.2s(seconds(1/60th of minute (1/60th of hour)) therefore 1 second = 1/3600th hour) */
 }
-
+/*.darkable {*/
 .darkable {
-    transition: 0.2s;
-}
+    transition: 0.2s; /*transition: 0.2s;*/
+} /*}*/
 
-header{
-    font-family: Arial, Helvetica, sans-serif;
+header{ /* does stuff */
+    font-family: Arial, Helvetica, sans-serif; /* sets font to Arial, but if there is no Arial we use Helvetica but if Helvetica is not available we use sans */
+    /* reviewer's note: SANS????? */
+    /* commenter's note: the word sans in french stands for no, as in , no serif meaning sans seriff, seriff is the fancy curly stuff that some fonts have, meaning sans seriff has no serif beacuse it is sans seriff meaning no seriff is inserted in the font sans serif */
+    /* boss' note: you're fired */
+    /* fire's note: yogurt*/
+    /* gurt: what is this programming environment? you guys should be working. yo*/
+    /* ts: pmo */
+    /* the humble horse: ts! */
+    /* ts: yo */
+    /* yo: gurt */
+    /* gurt: wadidaido? */
+    
     width: 100%;
     height: 52px;
     background-color: black;
