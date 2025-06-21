@@ -333,6 +333,8 @@ footer div {
     background-color: rgba(128, 128, 128, 0.3);
     border-radius: 50%;
     cursor: pointer;
+
+    z-index: 5;
 }
 
 .closeButton img {
@@ -346,4 +348,13 @@ footer div {
     font-size: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    position: relative;
+    bottom: 30px;
 }
+
+/* Formatação de texto dos cards */
+.textholder {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
