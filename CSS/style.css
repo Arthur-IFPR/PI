@@ -263,6 +263,12 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     background-color: #ffffff;
     
     padding: 2rem;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
 }
 
 .dark-modal {
@@ -311,7 +317,6 @@ footer div {
 .closeButtonContainer {
     display: flex;
     width: 100%;
-    
     justify-content: end;
 }
 
@@ -334,7 +339,7 @@ footer div {
     border-radius: 50%;
     cursor: pointer;
 
-    z-index: 5;
+    z-index: 99;
 }
 
 .closeButton img {
@@ -353,6 +358,7 @@ footer div {
 }
 
 /* Formatação de texto dos cards */
+
 .textholder {
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;

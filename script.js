@@ -28,5 +28,3 @@ function toggleModal(cardTopic) {
     const modal = document.querySelector(`#card-${cardTopic}`);
     modal.classList.toggle('hide-modal');
 }
-
-
