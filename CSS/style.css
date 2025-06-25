@@ -38,6 +38,9 @@ header{ /* does stuff */
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
     position: relative;
     z-index: 1;
+
+    position: sticky;
+    top: 0.0000000000000000000000001px;
 }
 
 header > div, header > nav {
@@ -263,7 +266,7 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
     background-color: #ffffff;
     
     padding: 2rem;
-    animation: fadeIn 0.7s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
