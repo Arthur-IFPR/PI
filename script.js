@@ -28,3 +28,13 @@ function toggleModal(cardTopic) {
     const modal = document.querySelector(`#card-${cardTopic}`);
     modal.classList.toggle('hide-modal');
 }
+
+const traducao = {
+    title: "Financial Conciusness",
+    cartao1: "fadsfsdfdsf"
+}
+
+function translate() {
+    const title = document.querySelector("#titulo");
+    title.innerHTML = traducao.title
+}
