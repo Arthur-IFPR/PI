@@ -18,7 +18,7 @@
 header{ /* does stuff */
     font-family: Arial, Helvetica, sans-serif; /* sets font to Arial, but if there is no Arial we use Helvetica but if Helvetica is not available we use sans */
     /* reviewer's note: SANS????? */
-    /* commenter's note: the word sans in french stands for without, as in , without serif meaning sans seriff, seriff is the fancy curly stuff that some fonts have, meaning sans seriff has no serif beacuse it is sans seriff meaning no seriff is inserted in the font sans serif */
+    /* commenter's note: the word sans in french stands for without, as in, without serif meaning sans seriff, seriff is the fancy curly stuff that some fonts have, meaning sans seriff has no serif beacuse it is sans seriff meaning no seriff is inserted in the font sans serif */
     /* boss' note: you're fired */
     /* fire's note: yogurt*/
     /* gurt: what is this programming environment? you guys should be working. yo*/
@@ -27,6 +27,9 @@ header{ /* does stuff */
     /* ts: yo */
     /* yo: gurt */
     /* gurt: wadidaido? */
+    /* SDIYBT: SDIYBT */
+    /* asgore: im driving in my car. right after a, uh, beer. Oh, hey! That bump is shaped like a deer! DIU? How about you die? I will go 100mph. Little do you know, i've filled up on gas. I will get your ass thaty makes fountains. im going to pulverize you with my bergentrück*/
+    /*December Holiday: sybau*/
     
     width: 100%;
     height: 52px;
@@ -55,6 +58,42 @@ header > div, header > nav {
 .navbuttons {
     text-align: end;
 }
+
+#langbtn {
+    width: 30px;
+    margin-left: 20px;
+}
+
+.dropdown-button{
+    padding: 0rem;
+    border: none;
+    background-color: black;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: crimson;
+    min-width: 25px;
+    box-shadow: 0px 8px 16px 0px;
+    z-index: 1;
+    padding: 10px;
+    gap: 10px;
+}
+
+#lang-pt{
+    color: crimson;
+
+}
+
+.dropdown-button:hover {
+    background-color: white;
+}
+
+.dropdown-button:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+} 
 
 /* botão de dark mode */
 /* para fins de clareza, "botão" se refere ao input, e "slider" ao visual do botão.*/
@@ -116,7 +155,8 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 .githublogo {
     width: 30px;
     position: relative;
-    left: 5%;
+    left: 0%;
+    top: 2px;
 }
 
 /* Texto-introdução */

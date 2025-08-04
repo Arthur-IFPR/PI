@@ -30,11 +30,11 @@ function toggleModal(cardTopic) {
 }
 
 const traducao = {
-    title: "Financial Conciusness",
-    cartao1: "fadsfsdfdsf"
+    title: "Financial Conciousness",
+    cartao1: "fansnfansfnansfnansfnasnfnasnfnansfnansfnnasnfnansfnansfnsanfnsanfnsanfnsanfnsanfnsanfnsafnsan"
 }
 
 function translate() {
-    const title = document.querySelector("#titulo");
+    const title = document.querySelector(".card > .title");
     title.innerHTML = traducao.title
 }
