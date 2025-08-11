@@ -116,6 +116,7 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 .githublogo {
     width: 30px;
     position: relative;
+    top: 2.7px;
     left: 5%;
 }
 
@@ -381,3 +382,27 @@ footer div {
     top: -25px;
     transform: translate(-50%, 0%);
 }
+
+#language {
+    margin-left: 30px;
+    background-color: #29292900;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
