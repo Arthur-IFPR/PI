@@ -1,22 +1,37 @@
 /* this is the css file*/
 * {
-    margin: 0px; /*sets margin to 0 px (pixels) in the screen (the magic mirror)*/
-    padding: 0px; /*sets padding to 0 px (pixels) in the screen (the magic mirror)*/
+    margin: 0px;
+    /*sets margin to 0 px (pixels) in the screen (the magic mirror)*/
+    padding: 0px;
+    /*sets padding to 0 px (pixels) in the screen (the magic mirror)*/
 }
 
 /* dark-mode */
 .dark-mode {
-    background-color: #292929; /* sets the backgtround color of the dark-mode to #292929 (hex color code(color code that does hex)) */
-    color: whitesmoke; /* sets color to whitesmoke*/
-    transition: 0.2s; /*sets transition to 0.2s(seconds(1/60th of minute (1/60th of hour)) therefore 1 second = 1/3600th hour) */
+    background-color: #292929;
+    /* sets the backgtround color of the dark-mode to #292929 (hex color code(color code that does hex)) */
+    color: whitesmoke;
+    /* sets color to whitesmoke*/
+    transition: 0.2s;
+    /*sets transition to 0.2s(seconds(1/60th of minute (1/60th of hour)) therefore 1 second = 1/3600th hour) */
 }
+
 /*.darkable {*/
 .darkable {
-    transition: 0.2s; /*transition: 0.2s;*/
-} /*}*/
+    transition: 0.2s;
+    /*transition: 0.2s;*/
+}
 
-header{ /* does stuff */
-    font-family: Arial, Helvetica, sans-serif; /* sets font to Arial, but if there is no Arial we use Helvetica but if Helvetica is not available we use sans */
+/*}*/
+
+.hide {
+    display: none;
+}
+
+header {
+    /* does stuff */
+    font-family: Arial, Helvetica, sans-serif;
+    /* sets font to Arial, but if there is no Arial we use Helvetica but if Helvetica is not available we use sans */
     /* reviewer's note: SANS????? */
     /* commenter's note: the word sans in french stands for without, as in , without serif meaning sans seriff, seriff is the fancy curly stuff that some fonts have, meaning sans seriff has no serif beacuse it is sans seriff meaning no seriff is inserted in the font sans serif */
     /* boss' note: you're fired */
@@ -27,7 +42,7 @@ header{ /* does stuff */
     /* ts: yo */
     /* yo: gurt */
     /* gurt: wadidaido? */
-    
+
     width: 100%;
     height: 52px;
     background-color: black;
@@ -43,17 +58,14 @@ header{ /* does stuff */
     top: 0.0000000000000000000000001px;
 }
 
-header > div, header > nav {
+header>div,
+header>nav {
     width: 30%;
 }
 
-.logo { 
+.logo {
     text-align: center;
     font-size: 2rem;
-}
-
-.navbuttons {
-    text-align: end;
 }
 
 /* botão de dark mode */
@@ -84,8 +96,9 @@ header > div, header > nav {
     border-radius: 20px;
 }
 
-.darkmodeslider:before { /* esse aqui é a bolinha do slider*/
-    position:absolute;
+.darkmodeslider:before {
+    /* esse aqui é a bolinha do slider*/
+    position: absolute;
     content: "";
     height: 21px;
     width: 21px;
@@ -96,12 +109,15 @@ header > div, header > nav {
     border-radius: 20px;
 }
 
-input:checked + .darkmodeslider { /* botão, quando marcado e o slider logo após*/
+input:checked+.darkmodeslider {
+    /* botão, quando marcado e o slider logo após*/
     background-color: lightgreen;
 }
 
-input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha do slider */
-    transform: translateX(26px); /* quando botão é desmarcado, bolinha do slider volta à posição original (por ser absoluta)*/
+input:checked+.darkmodeslider:before {
+    /* botão, quando marcado e a bolinha do slider */
+    transform: translateX(26px);
+    /* quando botão é desmarcado, bolinha do slider volta à posição original (por ser absoluta)*/
     -webkit-transform: translateX(26px);
     background-color: rgb(56, 56, 56);
 }
@@ -144,10 +160,10 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 
 .introtext {
     display: flex;
-    
+
     justify-content: center;
     align-items: center;
-    
+
     text-align: left;
 
     height: 100%;
@@ -170,14 +186,14 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 
 .precard-text {
     margin-top: 20px;
-    
+
     display: flex;
-    
+
     flex-direction: column;
     gap: 16px;
-    
+
     text-align: center;
-    
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
 }
@@ -202,28 +218,28 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 .card {
     width: 320px;
     height: 200px;
-    
+
     margin: 25px;
-    
+
     display: flex;
-    
+
     justify-content: center;
     align-items: center;
-    
+
     flex-direction: column;
-    
+
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-weight: 750;
+
+
 }
 
-.card > img:hover {
+.card>img:hover {
     transform: scale(1.2);
 }
 
-
-
-.card > img {
+.card>img {
     transition-duration: 0.3s;
 
     cursor: pointer;
@@ -233,19 +249,19 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 
 .modal-background {
     display: flex;
-    
+
     justify-content: center;
     align-items: center;
-    
+
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    
+
     position: fixed;
-    
+
     z-index: 1;
 
     top: 0px;
-    
+
     width: 100vw;
     height: 100vh;
 
@@ -256,27 +272,32 @@ input:checked + .darkmodeslider:before { /* botão, quando marcado e a bolinha d
 .modal {
     min-height: 450px;
     min-width: 500px;
-    
+
     height: 80%;
     width: 80%;
-    
+
     overflow: auto;
 
     border-radius: 1rem;
 
     background-color: #ffffff;
-    
+
     padding: 2rem;
     animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 100;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
 }
 
 .dark-modal {
-   background-color: #292929;
+    background-color: #292929;
 }
 
 .hide-modal {
@@ -383,26 +404,62 @@ footer div {
     transform: translate(-50%, 0%);
 }
 
+/*Mudar a lenguage do site🥀*/
+
 #language {
     margin-left: 30px;
     background-color: #29292900;
     border: none;
+    margin-top: 5px;
+    cursor: pointer;
 }
 
 
+@keyframes dropDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.lang-content {
+    position: absolute;
+    min-width: 120px;
+    z-index: 5;
+    background-color: hsl(0, 0%, 15%);
+    right: 50px;
+    top: 52px;
+    animation-name: dropDown;
+    animation-duration: 0.5s;
+}
 
 
+.navbuttons {
+    display: flex;
+    justify-content: flex-end;
 
+    width: 30%;
+    
+}
 
+.lang-content>div {
+    padding: 10px;
+    text-align: start;
+}
 
+.lang-content>div>a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
 
+}
 
-
-
-
-
-
-
-
-
-
+.lang-content>div:hover {
+    background-color: hsl(0, 0%, 30%);
+}

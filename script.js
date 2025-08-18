@@ -23,8 +23,15 @@ cards.forEach(element => {
     })
 })
 
-
 function toggleModal(cardTopic) {
     const modal = document.querySelector(`#card-${cardTopic}`);
     modal.classList.toggle('hide-modal');
+}
+
+// Farmar aura
+
+const langContent = document.querySelector(".lang-content");
+
+function toggleLanguageDisplay() {
+    langContent.classList.toggle('hide')
 }
