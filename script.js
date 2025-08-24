@@ -28,8 +28,6 @@ function toggleModal(cardTopic) {
     modal.classList.toggle('hide-modal');
 }
 
-// Farmar aura
-
 const langContent = document.querySelector(".lang-content");
 
 function toggleLanguageDisplay() {

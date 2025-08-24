@@ -56,7 +56,7 @@ header {
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     position: sticky;
     top: 0.0000000000000000000000001px;
@@ -450,3 +450,34 @@ footer div {
     transform: translate(-50%, 0%);
 }
 
+#language {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.lang-content {
+    position: absolute;
+    min-width: 100px;
+    z-index: 1;
+    background-color: #292929;
+    
+    right: -50px;
+    top: 37px;
+}
+
+.lang-content > div {
+    padding: 15px 0px 15px 0px;
+}
+
+.lang-content > div:hover {
+    background-color: #444444;
+}
+
+.lang-content > div > a {
+    color: white;
+    text-decoration: none;
+    text-align: start;
+}
