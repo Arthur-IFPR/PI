@@ -47,12 +47,14 @@ const translations = {
         title: "Conciencia financiera",
         textOne: "En financi.guru queremos que los principios de la educación financiera estén disponibles para todos, los necesiten o no.",
         textTwo: "En un mundo tan complejo, lleno de estafas y planes maliciosos que intentan robarte tu dinero, es muy importante saber cómo lidiar con los peligros que podrían acabar perjudicándote financieramente.",
+        cardOneTitle: "Como dejotar el consumerismo, (eu não sei espanhol, eu realmente espero que você não tenha testado espanhol Gustavo)"
     },
 
     portuguese: {
         title: "Consciência Financeira",
         textOne: "Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.",
-        textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente."
+        textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
+        cardOneTitle: "Como derrotar o Consumismo"
     }
 }
 
