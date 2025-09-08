@@ -127,6 +127,15 @@ header>nav {
     opacity: 0;
 }
 
+.darkmode {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    position: relative;
+}
+
 .darkmodeslider {
     position: absolute;
     cursor: pointer;
@@ -154,7 +163,6 @@ header>nav {
 }
 
 input:checked+.darkmodeslider {
-    /* botão, quando marcado e o slider logo após*/
     background-color: lightgreen;
 }
 
@@ -164,6 +172,25 @@ input:checked+.darkmodeslider:before {
     /* quando botão é desmarcado, bolinha do slider volta à posição original (por ser absoluta)*/
     -webkit-transform: translateX(26px);
     background-color: rgb(56, 56, 56);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+}
+
+#sun, #moon {
+    position: absolute;
+
+    animation: fadeIn 0.5s forwards;
+}
+
+#sun {
+    left: -35px;
+}
+
+#moon {
+    left: 60px;
 }
 
 /* Logo */

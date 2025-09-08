@@ -1,20 +1,28 @@
-
 let darkmode = false;
 const modals = document.querySelectorAll(".modal")
 function toggleDarkMode() {
-    const elements = document.querySelectorAll(".darkable")
+    const elements = document.querySelectorAll(".darkable")    
+
+    const sun = document.getElementById("sun");
+    const moon = document.getElementById("moon");
+
     elements.forEach(element => {
         const currentClass = element.className
-        element.classList.toggle('dark-mode');
+        element.classList.toggle('dark-mode')
     });
 
     modals.forEach(modal => {
         modal.classList.toggle('dark-modal');
     })
     darkmode = !darkmode;
+
+    sun.classList.toggle('hide');
+    moon.classList.toggle('hide');
 }
 
 const cards = document.querySelectorAll(".card");
+
+console.log(cards)
 
 cards.forEach(element => {
     element.addEventListener('click', event => {
@@ -37,75 +45,48 @@ function toggleLanguageDisplay() {
 // traduções
 const translations = {
     english: {
-        title: "Financial Consciousness",
-        textOne: "We at financi.guru want the principles of financial education to be available to everyone.",
-        textTwo: "In such a complicated world, full of scams and malicious people trying to steal your money, it's very important to know how to deal with dangers that can end up harming you financially.",
-        fraseDeEfeito: "If you need to learn how to do this, you're in the right place.",
-        topicTitle: "Check out our topics",
-        cardOneTitle: "How to defeat consumerism",
-        cardTwoTitle: "Planning",
-        cardThreeTitle: "Differences between Credit and Debit",
-        cardFourTitle: "The dangers of scams",
+        title:  "Financial Consciousness",
+        textOne: "We, at Financi.guru, have a great concern about the nignaigniangnaing",
+        textTwo: "I'm dribing in my car right after a beer hey that bump is shaped like a homnosswexual brazzilian man",
+        cardOneTitle: "How to defeat consumerism"
     },
-
+    
     spanish: {
         title: "Conciencia financiera",
         textOne: "En financi.guru queremos que los principios de la educación financiera estén disponibles para todos, los necesiten o no.",
         textTwo: "En un mundo tan complejo, lleno de estafas y planes maliciosos que intentan robarte tu dinero, es muy importante saber cómo lidiar con los peligros que podrían acabar perjudicándote financieramente.",
-        fraseDeEfeito: "Si necesitas aprender cómo hacer esto, estás en el lugar correcto.",
-        topicTitle: "Consulta nuestros temas",
-        cardOneTitle: "Como vencer el consumerismo",
-        cardTwoTitle: "Planificación",
-        cardThreeTitle: "Diferencias entre Crédito y Débito",
-        cardFourTitle: "Los peligros de las estafas"
     },
 
     portuguese: {
         title: "Consciência Financeira",
         textOne: "Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.",
-        textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
-        topicTitle: "Confira nossos tópicos",
-        cardOneTitle: "Como derrotar o Consumismo",
-        cardTwoTitle: "Planejamento",
-        cardThreeTitle: "Diferenças entre Crédito e Débito",
-        cardFourTitle: "Os perigos dos golpes",
+        textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente."
     }
 }
 
 const title = document.querySelector("#titulo");
 const paragraphs = document.querySelectorAll("p");
 const titles = document.querySelectorAll("h1");
-const fraseDeEfeito = document.querySelector("#frasedeefeito");
-const topicTitle = document.querySelector(".precard-text")
 
 function translate(language) {
-    title.innerHTML = translations[language].title;
+        title.innerHTML = translations[language].title;
 
-    paragraphs[0].innerText = translations[language].textOne;
-    paragraphs[1].innerText = translations[language].textTwo;
-    fraseDeEfeito.innerText = translations[language].fraseDeEfeito;
+        paragraphs[0].innerText = translations[language].textOne;
+        paragraphs[1].innerText = translations[language].textTwo;
 
-    topicTitle.innerText = translations[language].topicTitle,
-    titles[1].innerText = translations[language].cardOneTitle;
-    titles[2].innerText = translations[language].cardTwoTitle
-    titles[3].innerText = translations[language].cardThreeTitle
-    titles[4].innerText = translations[language].cardFourTitle
+        titles[1].innerText = translations[language].cardOneTitle
 }
 
-const inglesButao = document.querySelector("#ingles");
-const espanholButao = document.querySelector("#espanhol");
-const portuguesButao = document.querySelector("#portugues");
+const inglesButao = document.querySelector("#ingles")
+const espanholButao = document.querySelector("#espanhol")
+const portuguesButao = document.querySelector("#portugues")
 
 inglesButao.addEventListener('click', () => {
-    translate("english");
+    translate("english")
 })
 espanholButao.addEventListener('click', () => {
-    translate("spanish");
+    translate("spanish")
 })
 portuguesButao.addEventListener('click', () => {
-    translate("portuguese");
-});
-
-const elemento = document.getElementsByClassName("macaco");
-
-
+    translate("portuguese")
+})
