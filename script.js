@@ -22,8 +22,6 @@ function toggleDarkMode() {
 
 const cards = document.querySelectorAll(".card");
 
-console.log(cards)
-
 cards.forEach(element => {
     element.addEventListener('click', event => {
         const cardTopic = event.target.id
@@ -46,27 +44,37 @@ function toggleLanguageDisplay() {
 const translations = {
     english: {
         title:  "Financial Consciousness",
-        textOne: "We, at Financi.guru, have a great concern about the nignaigniangnaing",
+        textOne: "We at financi.guru want the principles of financial education to be available to everyone.",
         textTwo: "I'm dribing in my car right after a beer hey that bump is shaped like a homnosswexual brazzilian man",
-        cardOneTitle: "How to defeat consumerism"
+        fraseEfeito: "If you want to learn how to do so, you've come to the right place",
+        cardOneTitle: "How to defeat consumerism",
+        precardText: "Check out our topics",
     },
     
     spanish: {
         title: "Conciencia financiera",
         textOne: "En financi.guru queremos que los principios de la educación financiera estén disponibles para todos, los necesiten o no.",
         textTwo: "En un mundo tan complejo, lleno de estafas y planes maliciosos que intentan robarte tu dinero, es muy importante saber cómo lidiar con los peligros que podrían acabar perjudicándote financieramente.",
+        fraseEfeito: "Si necesitas aprender cómo hacer esto, estás en el lugar correcto.",
+        cardOneTitle: "Cómo derrotar al consumismo",
+        precardText: "Confere nuestros temas",
     },
 
     portuguese: {
         title: "Consciência Financeira",
         textOne: "Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.",
-        textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente."
+        textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
+        fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo",
+        cardOneTitle: "Como derrotar o consumismo",
+        precardText: "Confira os nossos tópicos",
     }
 }
 
 const title = document.querySelector("#titulo");
 const paragraphs = document.querySelectorAll("p");
 const titles = document.querySelectorAll("h1");
+const fraseDeEfeito = document.querySelector("#frasedeefeito");
+const precard = document.querySelector(".precard-text")
 
 function translate(language) {
         title.innerHTML = translations[language].title;
@@ -74,7 +82,10 @@ function translate(language) {
         paragraphs[0].innerText = translations[language].textOne;
         paragraphs[1].innerText = translations[language].textTwo;
 
-        titles[1].innerText = translations[language].cardOneTitle
+        titles[1].innerText = translations[language].cardOneTitle;
+
+        fraseDeEfeito.innerText = translations[language].fraseEfeito;
+        precard.innerText = translations[language].precardText;        
 }
 
 const inglesButao = document.querySelector("#ingles")
