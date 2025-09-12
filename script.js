@@ -45,10 +45,18 @@ const translations = {
     english: {
         title:  "Financial Consciousness",
         textOne: "We at financi.guru want the principles of financial education to be available to everyone.",
-        textTwo: "I'm dribing in my car right after a beer hey that bump is shaped like a homnosswexual brazzilian man",
-        fraseEfeito: "If you want to learn how to do so, you've come to the right place",
+        textTwo: "In such a complicated world, filled with malice and scams that try to take away your money, it is vital to know how to deal with dangers that can harm you financially.",
+        fraseEfeito: "If you want to learn how to do so, you've come to the right place.",
         cardOneTitle: "How to defeat consumerism",
         precardText: "Check out our topics",
+        cardSmallTitles: [
+            "Consumerism",
+            "Planning",
+            "Credit & Debit",
+            "Scams",
+            "Cryptocurrency",
+            "Investing"
+        ]
     },
     
     spanish: {
@@ -56,8 +64,19 @@ const translations = {
         textOne: "En financi.guru queremos que los principios de la educación financiera estén disponibles para todos, los necesiten o no.",
         textTwo: "En un mundo tan complejo, lleno de estafas y planes maliciosos que intentan robarte tu dinero, es muy importante saber cómo lidiar con los peligros que podrían acabar perjudicándote financieramente.",
         fraseEfeito: "Si necesitas aprender cómo hacer esto, estás en el lugar correcto.",
-        cardOneTitle: "Cómo derrotar al consumismo",
         precardText: "Confere nuestros temas",
+        cardSmallTitles: [
+            "Consumismo",
+            "Planificación",
+            "Credito y Debito",
+            "Estafas",
+            "Criptomonedas",
+            "Inversiones"
+        ],
+        cardTitles: [
+            "Cómo vencer el consumismo",
+            
+        ]
     },
 
     portuguese: {
@@ -67,6 +86,14 @@ const translations = {
         fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo",
         cardOneTitle: "Como derrotar o consumismo",
         precardText: "Confira os nossos tópicos",
+        cardSmallTitles: [
+            "Consumismo",
+            "Planejamento",
+            "Crédito e Débito",
+            "Golpes",
+            "Criptomoedas",
+            "Investimentos"
+        ]
     }
 }
 
@@ -74,7 +101,9 @@ const title = document.querySelector("#titulo");
 const paragraphs = document.querySelectorAll("p");
 const titles = document.querySelectorAll("h1");
 const fraseDeEfeito = document.querySelector("#frasedeefeito");
-const precard = document.querySelector(".precard-text")
+const precard = document.querySelector(".precard-text");
+
+const cardSmallTitles = document.querySelectorAll('.card-small-title');
 
 function translate(language) {
         title.innerHTML = translations[language].title;
@@ -85,7 +114,15 @@ function translate(language) {
         titles[1].innerText = translations[language].cardOneTitle;
 
         fraseDeEfeito.innerText = translations[language].fraseEfeito;
-        precard.innerText = translations[language].precardText;        
+        precard.innerText = translations[language].precardText;
+
+        let i = 0;
+        cardSmallTitles.forEach(element => {
+            element.innerText = translations[language].cardSmallTitles[i];
+            i++;
+            console.log(i)
+        })
+
 }
 
 const inglesButao = document.querySelector("#ingles")
