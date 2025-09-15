@@ -56,6 +56,14 @@ const translations = {
             "Scams",
             "Cryptocurrency",
             "Investing"
+        ],
+        cardTitles: [
+            "How to defeat consumerism",
+            "Planning",
+            "Difference between credit & debit",
+            "The dangers of scams",
+            "Cryptocurrency",
+            "Investing"
         ]
     },
     
@@ -75,7 +83,11 @@ const translations = {
         ],
         cardTitles: [
             "Cómo vencer el consumismo",
-            
+            "Planificacíon",
+            "Diferencia entre crédito y débito",
+            "Los peligros de las estafas",
+            "Critpomonedas",
+            "Inversiones"
         ]
     },
 
@@ -93,7 +105,16 @@ const translations = {
             "Golpes",
             "Criptomoedas",
             "Investimentos"
-        ]
+        ],
+        cardTitles: [
+            "Como derrotar o consumismo",
+            "Investimentos",
+            "Diferenças entre Crédito e Débito",
+            "Os perigos dos golpes",
+            "Criptomoedas",
+            "Investimento"
+        ],
+
     }
 }
 
@@ -104,6 +125,7 @@ const fraseDeEfeito = document.querySelector("#frasedeefeito");
 const precard = document.querySelector(".precard-text");
 
 const cardSmallTitles = document.querySelectorAll('.card-small-title');
+const cardInsideTitles = document.querySelectorAll('#maintitle');
 
 function translate(language) {
         title.innerHTML = translations[language].title;
@@ -120,7 +142,12 @@ function translate(language) {
         cardSmallTitles.forEach(element => {
             element.innerText = translations[language].cardSmallTitles[i];
             i++;
-            console.log(i)
+        })
+
+        let j = 0;
+        cardInsideTitles.forEach(element => {
+            element.innerText = translations[language].cardTitles[j];
+            j++;
         })
 
 }
