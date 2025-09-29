@@ -36,8 +36,22 @@ function toggleModal(cardTopic) {
 
 const langContent = document.querySelector(".lang-content");
 
+let isLangOpen = false;
 function toggleLanguageDisplay() {
-    langContent.classList.toggle('hide')
+    if (isLangOpen) {
+        langContent.style.animation = "none"
+        langContent.offsetWidth;
+        langContent.style.animation = "dropDown 0.5s reverse";
+        langContent.addEventListener('animationend', () => {
+            langContent.classList.add('hide');
+        }, {once: true})
+    } else {
+        langContent.style.animation = "none"
+        langContent.offsetWidth;
+        langContent.style.animation = "dropDown 0.5s forwards";
+        langContent.classList.remove('hide');
+    }
+    isLangOpen = !isLangOpen;
 }
 
 // traduções
@@ -149,7 +163,6 @@ function translate(language) {
             element.innerText = translations[language].cardTitles[j];
             j++;
         })
-
 }
 
 const inglesButao = document.querySelector("#ingles")

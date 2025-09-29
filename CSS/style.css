@@ -6,6 +6,21 @@
     /*sets padding to 0 px (pixels) in the screen (the magic mirror)*/
 }
 
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    background-color: gray;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #292929;
+
+    
+}
+
 /* dark-mode */
 .dark-mode {
     background-color: #292929;
@@ -60,6 +75,7 @@ header {
 
     position: sticky;
     top: 0.0000000000000000000000001px;
+    
 }
 
 header>div,
@@ -177,6 +193,11 @@ input:checked+.darkmodeslider:before {
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1;}
+}
+
+@keyframes dropDown {
+    0% { transform: translateX(200px); }
+    100% { transform: translateX(0px); }
 }
 
 #sun, #moon {
