@@ -36,8 +36,23 @@ function toggleModal(cardTopic) {
 
 const langContent = document.querySelector(".lang-content");
 
+let isLangOpen = false;
 function toggleLanguageDisplay() {
-    langContent.classList.toggle('hide')
+    const lang = document.querySelector('.lang-content');
+    if (isLangOpen) {
+        lang.style.animation = "";
+        lang.offsetWidth;
+        lang.style.animation = "goFromRightToLeft 1s reverse";
+        lang.addEventListener('animationend', () => {
+            lang.classList.add('hide');
+        }, {once: true})
+    } else {
+        lang.classList.remove('hide')
+        lang.style.animation = "";
+        lang.offsetWidth;
+        lang.style.animation = "goFromRightToLeft 1s forwards";
+    }
+    isLangOpen = !isLangOpen;
 }
 
 // traduções
