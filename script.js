@@ -1,7 +1,7 @@
 let darkmode = false;
 const modals = document.querySelectorAll(".modal")
 function toggleDarkMode() {
-    const elements = document.querySelectorAll(".darkable")    
+    const elements = document.querySelectorAll(".darkable")
 
     const sun = document.getElementById("sun");
     const moon = document.getElementById("moon");
@@ -36,6 +36,8 @@ function toggleModal(cardTopic) {
 
 const langContent = document.querySelector(".lang-content");
 
+
+
 let isLangOpen = false;
 function toggleLanguageDisplay() {
     const lang = document.querySelector('.lang-content');
@@ -45,7 +47,7 @@ function toggleLanguageDisplay() {
         lang.style.animation = "goFromRightToLeft 1s reverse";
         lang.addEventListener('animationend', () => {
             lang.classList.add('hide');
-        }, {once: true})
+        }, { once: true })
     } else {
         lang.classList.remove('hide')
         lang.style.animation = "";
@@ -58,7 +60,7 @@ function toggleLanguageDisplay() {
 // traduções
 const translations = {
     english: {
-        title:  "Financial Consciousness",
+        title: "Financial Consciousness",
         textOne: "We at financi.guru want the principles of financial education to be available to everyone.",
         textTwo: "In such a complicated world, filled with malice and scams that try to take away your money, it is vital to know how to deal with dangers that can harm you financially.",
         fraseEfeito: "If you want to learn how to do so, you've come to the right place.",
@@ -81,7 +83,7 @@ const translations = {
             "Investing"
         ]
     },
-    
+
     spanish: {
         title: "Conciencia financiera",
         textOne: "En financi.guru queremos que los principios de la educación financiera estén disponibles para todos, los necesiten o no.",
@@ -143,29 +145,53 @@ const cardSmallTitles = document.querySelectorAll('.card-small-title');
 const cardInsideTitles = document.querySelectorAll('#maintitle');
 
 function translate(language) {
-        title.innerHTML = translations[language].title;
+    title.innerHTML = translations[language].title;
 
-        paragraphs[0].innerText = translations[language].textOne;
-        paragraphs[1].innerText = translations[language].textTwo;
+    paragraphs[0].innerText = translations[language].textOne;
+    paragraphs[1].innerText = translations[language].textTwo;
 
-        titles[1].innerText = translations[language].cardOneTitle;
+    titles[1].innerText = translations[language].cardOneTitle;
 
-        fraseDeEfeito.innerText = translations[language].fraseEfeito;
-        precard.innerText = translations[language].precardText;
+    fraseDeEfeito.innerText = translations[language].fraseEfeito;
+    precard.innerText = translations[language].precardText;
 
-        let i = 0;
-        cardSmallTitles.forEach(element => {
-            element.innerText = translations[language].cardSmallTitles[i];
-            i++;
-        })
+    let i = 0;
+    cardSmallTitles.forEach(element => {
+        element.innerText = translations[language].cardSmallTitles[i];
+        i++;
+    });
 
-        let j = 0;
-        cardInsideTitles.forEach(element => {
-            element.innerText = translations[language].cardTitles[j];
-            j++;
-        })
-
+    let j = 0;
+    cardInsideTitles.forEach(element => {
+        element.innerText = translations[language].cardTitles[j];
+        j++;
+    })
 }
+
+function attachTextToCards(language) {
+    const cards = document.querySelectorAll('.card');
+
+    let asdfghjkln = 0;
+    cards.forEach((card) => {
+
+        const width = card.clientWidth;
+        const existingCardTitle = document.querySelector('.card > p')
+        if (existingCardTitle) { existingCardTitle.remove() }
+
+        const cardTitle = document.createElement('p');
+        card.appendChild(cardTitle);
+
+        cardTitle.style.position = "relative"
+        cardTitle.style.left = `${width - cardTitle.innerText.length}`;
+        cardTitle.style.zIndex = 99999999999
+
+        cardTitle.textContent = `${translations[language].cardSmallTitles[asdfghjkln]}`;
+        asdfghjkln++;
+        console.log(cardTitle)
+    })
+}
+
+attachTextToCards("portuguese")
 
 const inglesButao = document.querySelector("#ingles")
 const espanholButao = document.querySelector("#espanhol")
@@ -173,10 +199,13 @@ const portuguesButao = document.querySelector("#portugues")
 
 inglesButao.addEventListener('click', () => {
     translate("english")
+    attachTextToCards("english")
 })
 espanholButao.addEventListener('click', () => {
     translate("spanish")
+    attachTextToCards("english")
 })
 portuguesButao.addEventListener('click', () => {
     translate("portuguese")
+    attachTextToCards("english")
 })
