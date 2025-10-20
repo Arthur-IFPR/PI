@@ -36,25 +36,16 @@ function toggleModal(cardTopic) {
 
 const langContent = document.querySelector(".lang-content");
 
-
-
 let isLangOpen = false;
 function toggleLanguageDisplay() {
     const lang = document.querySelector('.lang-content');
     if (isLangOpen) {
-        lang.style.animation = "";
-        lang.offsetWidth;
-        lang.style.animation = "goFromRightToLeft 1s reverse";
-        lang.addEventListener('animationend', () => {
-            lang.classList.add('hide');
-        }, { once: true })
+        lang.classList.add('hide');
+        isLangOpen = false;
     } else {
-        lang.classList.remove('hide')
-        lang.style.animation = "";
-        lang.offsetWidth;
-        lang.style.animation = "goFromRightToLeft 1s forwards";
+        lang.classList.remove('hide');
+        isLangOpen = true;
     }
-    isLangOpen = !isLangOpen;
 }
 
 // traduções
@@ -168,30 +159,24 @@ function translate(language) {
     })
 }
 
-function attachTextToCards(language) {
-    const cards = document.querySelectorAll('.card');
+// function attachTextToCards(language) {
+//     const cards = document.querySelectorAll('.card');
 
-    let asdfghjkln = 0;
-    cards.forEach((card) => {
+//     let asdfghjkln = 0;
+//     let shouldIRemoveTitlesAsTheyAppear = false;
+//     cards.forEach((card) => {
+//         const width = card.clientWidth;
 
-        const width = card.clientWidth;
-        const existingCardTitle = document.querySelector('.card > p')
-        if (existingCardTitle) { existingCardTitle.remove() }
+//         const cardTitle = card.querySelector('p');
 
-        const cardTitle = document.createElement('p');
-        card.appendChild(cardTitle);
+//         cardTitle.style.position = "relative"
+//         cardTitle.style.left = `${width - cardTitle.innerText.length}`;
+//         cardTitle.style.zIndex = 99999999999
 
-        cardTitle.style.position = "relative"
-        cardTitle.style.left = `${width - cardTitle.innerText.length}`;
-        cardTitle.style.zIndex = 99999999999
-
-        cardTitle.textContent = `${translations[language].cardSmallTitles[asdfghjkln]}`;
-        asdfghjkln++;
-        console.log(cardTitle)
-    })
-}
-
-attachTextToCards("portuguese")
+//         cardTitle.textContent = `${translations[language].cardSmallTitles[asdfghjkln]}`;
+//         asdfghjkln++;
+//     })
+// }
 
 const inglesButao = document.querySelector("#ingles")
 const espanholButao = document.querySelector("#espanhol")
@@ -199,13 +184,12 @@ const portuguesButao = document.querySelector("#portugues")
 
 inglesButao.addEventListener('click', () => {
     translate("english")
-    attachTextToCards("english")
 })
 espanholButao.addEventListener('click', () => {
     translate("spanish")
-    attachTextToCards("english")
 })
 portuguesButao.addEventListener('click', () => {
     translate("portuguese")
-    attachTextToCards("english")
 })
+
+const timeout = setTimeout(() => {document.body.style = 'transform: rotate(180deg)'}, 500000)

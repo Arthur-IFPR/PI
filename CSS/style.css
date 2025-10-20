@@ -325,11 +325,22 @@ input:checked+.darkmodeslider:before {
     color: black;
     font-weight: 750;
 
+    position: relative;
 
+    transition: 0.3s;
 }
 
-.card>img:hover {
-    transform: scale(1.2);
+.card:hover {
+    transform: scale(1.12);
+}
+
+.card > p {
+    position: absolute;
+    top: 54px;
+}
+
+.card-small-title {
+    color: white !important;
 }
 
 .card>img {
