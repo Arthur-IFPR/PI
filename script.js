@@ -206,7 +206,7 @@ window.addEventListener('scroll', () => {
     } else {
         header.style.height = `52px`
         headerElements.forEach(element => {
-            element.style.transform = `scale(${AUMENTO})`;
+            element.style.transform = `scale(1)`;
             element.style.transformOrigin = `center`;
             element.style.transition = `0.5s ease-out`;
             
