@@ -103,7 +103,7 @@ const translations = {
         title: "Consciência Financeira",
         textOne: "Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.",
         textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
-        fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo",
+        fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo.",
         cardOneTitle: "Como derrotar o consumismo",
         precardText: "Confira os nossos tópicos",
         cardSmallTitles: [
@@ -178,9 +178,9 @@ function translate(language) {
 //     })
 // }
 
-const inglesButao = document.querySelector("#ingles")
-const espanholButao = document.querySelector("#espanhol")
-const portuguesButao = document.querySelector("#portugues")
+const inglesButao = document.querySelector("#ingles");
+const espanholButao = document.querySelector("#espanhol");
+const portuguesButao = document.querySelector("#portugues");
 
 inglesButao.addEventListener('click', () => {
     translate("english")
@@ -192,4 +192,24 @@ portuguesButao.addEventListener('click', () => {
     translate("portuguese")
 })
 
-const timeout = setTimeout(() => {document.body.style = 'transform: rotate(180deg)'}, 500000)
+// header estiloso por dani
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const headerElements = header.querySelectorAll('header > *');
+    const AUMENTO = 1.15;
+    if (window.scrollY <= 0) {
+        header.style.height = `90px`
+        headerElements.forEach(element => {
+            element.style.transform = `scale(${AUMENTO})`;
+            element.style.transition = `0.5s ease-out`;
+        })
+    } else {
+        header.style.height = `52px`
+        headerElements.forEach(element => {
+            element.style.transform = `scale(${AUMENTO})`;
+            element.style.transformOrigin = `center`;
+            element.style.transition = `0.5s ease-out`;
+            
+        })
+    }
+})
