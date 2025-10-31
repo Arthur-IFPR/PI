@@ -30,29 +30,30 @@
 
             <button id="language" onclick="toggleLanguageDisplay()">
                 <img src="assets/images/newglobe.svg" width="35px">
-                    <div class="lang-content hide">
-                        <div id="portugues">
-                            <img src="assets/images/flag-br.png" width="20px">
-                            <a href="#">  Português</a>
-                        </div>
-                        <div id="ingles">
-                            <img src="assets/images/flag-us.png" width="20px">
-                            <a href="#">  Inglês</a>
-                        </div>
-                        <div id="espanhol">
-                            <img src="assets/images/flag-es.png" width="20px">
-                            <a href="#">  Espanhol</a>
-                        </div>
+                <div class="lang-content hide">
+                    <div id="portugues">
+                        <img src="assets/images/flag-br.png" width="20px">
+                        <a href="#"> Português</a>
                     </div>
+                    <div id="ingles">
+                        <img src="assets/images/flag-us.png" width="20px">
+                        <a href="#"> Inglês</a>
+                    </div>
+                    <div id="espanhol">
+                        <img src="assets/images/flag-es.png" width="20px">
+                        <a href="#"> Espanhol</a>
+                    </div>
+                </div>
             </button>
         </nav>
     </header>
-    
+
     <main>
         <div class="intro" style="color: black;">
             <div class="introtext">
                 <h1 id="titulo">Consciência Financeira</h1><br>
-                <p id="p1">Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.
+                <p id="p1">Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a
+                    todos.
                 </p><br>
                 <p id="p2">Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito
                     importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.</p>
@@ -68,15 +69,27 @@
         <h4 id="click-to-access">Clique em um cartão para acessar seu conteúdo</h4>
         <div class="cards darkable">
             <div class="cards-1">
-                <div class="card"><img id="consumismo" src="assets/images/card.svg"><p class="darkable card-small-title">Consumismo</p></img></div>
-                <div class="card"><img src="assets/images/card.svg" id="planejamento"><p class="darkable card-small-title" >Planejamento</p></div>
-                <div class="card"><img id="credito-e-debito" src="assets/images/card.svg"><p class="darkable card-small-title">Crédito e Débito</p></div>
+                <div class="card"><img id="consumismo" src="assets/images/card-consumismo.svg">
+                    <p class="card-small-title">Consumismo</p>
+                </div>
+                <div class="card"><img src="assets/images/card-planejamento.svg" id="planejamento">
+                    <p class="card-small-title">Planejamento</p>
+                </div>
+                <div class="card"><img id="credito-e-debito" src="assets/images/card-credito-debito.svg">
+                    <p class="card-small-title">Crédito e Débito</p>
+                </div>
             </div>
 
-            <div class="cards-2" >
-                <div class="card "><img src="assets/images/card.svg" id="golpes "><p class="darkable card-small-title">Golpes</p></div>
-                <div class="card "><img src="assets/images/card.svg" id="criptomoedas "><p class="darkable card-small-title">Criptomoedas</p></div>
-                <div class="card "><img src="assets/images/card.svg" id="investimentos "><p class="darkable card-small-title">Investimentos</p></div>
+            <div class="cards-2">
+                <div class="card"><img src="assets/images/card-golpes.svg" id="golpes">
+                    <p class="card-small-title">Golpes</p>
+                </div>
+                <div class="card"><img src="assets/images/card-criptomoedas.svg" id="criptomoedas ">
+                    <p class="card-small-title">Criptomoedas</p>
+                </div>
+                <div class="card"><img src="assets/images/card-investimentos.svg" id="investimentos ">
+                    <p class="card-small-title">Investimentos</p>
+                </div>
             </div>
         </div>
 
@@ -85,31 +98,63 @@
                 <div class="modal">
                     <div class="closeButtonContainer">
                         <div class="closeButton" onclick="toggleModal('consumismo')">
-                            <img src="assets/images/close.png"> 
+                            <img src="assets/images/close.png">
                         </div>
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
                         <h1 id="maintitle">Como derrotar o Consumismo</h1>
-                        <p id="textconsumismo1">Você já se viu comprando mais do que o necessário? Gastando muito dinheiro com coisas desnecessárias? Pois é. Isso se chama <b>Consumismo.</b></p>
-                        <p>De acordo como o dicionário <a href="https://languages.oup.com/" target="_blank">Oxford Languages</a>, Consumismo se define como <i>"ato, efeito, fato ou prática de consumir em demasia."</i>. É o ato de comprar ou consumir demais, muitas vezes por impulso, o que não é necessário. Nesse pequeno artigo, iremos aprender como não cair no consumismo e como desviar de suas armadilhas que podem até te colocar em dívidas.</p><br><br>
+                        <p id="textconsumismo1">Você já se viu comprando mais do que o necessário? Gastando muito
+                            dinheiro com coisas desnecessárias? Pois é. Isso se chama <b>Consumismo.</b></p>
+                        <p>De acordo como o dicionário <a href="https://languages.oup.com/" target="_blank">Oxford
+                                Languages</a>, Consumismo se define como <i>"ato, efeito, fato ou prática de consumir em
+                                demasia."</i>. É o ato de comprar ou consumir demais, muitas vezes por impulso, o que
+                            não é necessário. Nesse pequeno artigo, iremos aprender como não cair no consumismo e como
+                            desviar de suas armadilhas que podem até te colocar em dívidas.</p><br><br>
                         <ol>
                             <li><b>Compras por impulso</b></li>
-                            <p>Compras que são feitas sem muita reflexão ou que são feitas de imediato muitas vezes levam a consumismo e perda de dinheiro. Principalmente em lojas e mercados, os produtos mais caros geralmente sempre estarão em "promoção" - isto é, aumentar artificialmente o preço de um produto e colocar uma estampa de preço reduzido. A palavra "promoção" está tão encravada nos nossos cérebros que uma mera placa amarela na frente de um supermercado é capaz de ativar liberação de dopamina em excesso e um despertar de ansiedade do tipo "se eu não comprar, vou me arrepender" ou "essa promoção pode nunca mais voltar".</p>
-                            <p>Tome cuidado com as promoções, principalmente em feriados e festividades. As lojas não seriam bobas o suficiente para perder dinheiro: elas sabem que com promoções, elas lucram.</p><br><br>
+                            <p>Compras que são feitas sem muita reflexão ou que são feitas de imediato muitas vezes
+                                levam a consumismo e perda de dinheiro. Principalmente em lojas e mercados, os produtos
+                                mais caros geralmente sempre estarão em "promoção" - isto é, aumentar artificialmente o
+                                preço de um produto e colocar uma estampa de preço reduzido. A palavra "promoção" está
+                                tão encravada nos nossos cérebros que uma mera placa amarela na frente de um
+                                supermercado é capaz de ativar liberação de dopamina em excesso e um despertar de
+                                ansiedade do tipo "se eu não comprar, vou me arrepender" ou "essa promoção pode nunca
+                                mais voltar".</p>
+                            <p>Tome cuidado com as promoções, principalmente em feriados e festividades. As lojas não
+                                seriam bobas o suficiente para perder dinheiro: elas sabem que com promoções, elas
+                                lucram.</p><br><br>
                             <li><b>Compras de mercado</b></li>
-                            <p>Ainda falando sobre compras, existem algumas coisas que podem nos ajudar a economizar nas compras do mês:
-                                <ul>
-                                    <li>Orçamento fixo: Separe apenas uma quantidade de dinheiro para usar no mercado. Assim, você evita comprar demais, e só compra o necessário. </li>
-                                    <li>Lista de Compras: No dia anterior, verifique de fato o que está faltando na casa, e monte uma lista de compras. Se você vai no mercado com exatamente o que você quer comprar em mente (e, principalmente, sem fome), é muito mais fácil de evitar gastos desnecessários.</li>
-                                    <li>Frequência: Na maioria das vezes, ir no mercado uma vez no mês é muito mais econômico do que ir toda semana. Quanto mais vezes você vai no mercado, maior é a sua chance de gastar com algo desnecessário. Além disso, preços tendem a aumentar no começo e final de mês; o ideal seria ir no meio do mês, uma vez apenas. Compre para durar, até porque os preços provavelmente aumentarão no próximo mês.</li>
-                                </ul>
-                                <br><br>
+                            <p>Ainda falando sobre compras, existem algumas coisas que podem nos ajudar a economizar nas
+                                compras do mês:
+                            <ul>
+                                <li>Orçamento fixo: Separe apenas uma quantidade de dinheiro para usar no mercado.
+                                    Assim, você evita comprar demais, e só compra o necessário. </li>
+                                <li>Lista de Compras: No dia anterior, verifique de fato o que está faltando na casa, e
+                                    monte uma lista de compras. Se você vai no mercado com exatamente o que você quer
+                                    comprar em mente (e, principalmente, sem fome), é muito mais fácil de evitar gastos
+                                    desnecessários.</li>
+                                <li>Frequência: Na maioria das vezes, ir no mercado uma vez no mês é muito mais
+                                    econômico do que ir toda semana. Quanto mais vezes você vai no mercado, maior é a
+                                    sua chance de gastar com algo desnecessário. Além disso, preços tendem a aumentar no
+                                    começo e final de mês; o ideal seria ir no meio do mês, uma vez apenas. Compre para
+                                    durar, até porque os preços provavelmente aumentarão no próximo mês.</li>
+                            </ul>
+                            <br><br>
                             <li><b>Perigos</b></li>
-                            <p>Agir de forma consumista pode ser extremamente prejudicial. Pode começar com um pão de queijo a mais que você compra, e pode terminar em você vender sua casa por vício em apostas. O consumismo abre portas para muitas coisas ruins na sua vida. Lembre-se de que o seu dinheiro é um recurso a ser manuseado, e não um ingresso pra entrar no prazer infinito - o dinheiro pode até comprar felicidade, mas a falta dele traz muito mais sofrimento.</p>
+                            <p>Agir de forma consumista pode ser extremamente prejudicial. Pode começar com um pão de
+                                queijo a mais que você compra, e pode terminar em você vender sua casa por vício em
+                                apostas. O consumismo abre portas para muitas coisas ruins na sua vida. Lembre-se de que
+                                o seu dinheiro é um recurso a ser manuseado, e não um ingresso pra entrar no prazer
+                                infinito - o dinheiro pode até comprar felicidade, mas a falta dele traz muito mais
+                                sofrimento.</p>
                             </p>
                         </ol><br><br>
-                        <p>Em conclusão, podemos derrotar o consumismo praticando consumo consciente, se preparando antes de comprar, e comprar somente o necessário quando necessário. Escapar das armadilhas do consumismo é o primeiro passo para uma vida financeira próspera. Não importa a quantidade de dinheiro que você tem - você pode economizar muito consumindo conscientemente. Lembre-se dessas coisas, e sua vida financeira será mais fácil.</p>
+                        <p>Em conclusão, podemos derrotar o consumismo praticando consumo consciente, se preparando
+                            antes de comprar, e comprar somente o necessário quando necessário. Escapar das armadilhas
+                            do consumismo é o primeiro passo para uma vida financeira próspera. Não importa a quantidade
+                            de dinheiro que você tem - você pode economizar muito consumindo conscientemente. Lembre-se
+                            dessas coisas, e sua vida financeira será mais fácil.</p>
                     </section>
                 </div>
             </div>
@@ -118,34 +163,79 @@
                 <div class="modal">
                     <div class="closeButtonContainer">
                         <div class="closeButton" onclick="toggleModal('planejamento')">
-                            <img src="assets/images/close.png"> 
+                            <img src="assets/images/close.png">
                         </div>
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
                         <h1 id="maintitle">Planejamentos</h1>
-                        <p>Sem dúvidas, um dos passos mais vitais para uma vida financeira bem sucedida é o <b>Planejamento.</b><br>
+                        <p>Sem dúvidas, um dos passos mais vitais para uma vida financeira bem sucedida é o
+                            <b>Planejamento.</b><br>
 
-                        Sem planejamento, você não tem controle sobre seu próprio dinheiro, não sabe para onde seus recursos vão ou vêm, e, principalmente, maior dificuldade para realizar seus sonhos de consumo. Nesse artigo, te mostraremos os principais pontos para se levar em conta para criar um bom planejamento que permita você ter controle maior sobre seu dinheiro, independente do tanto que tem.</p><br><br>
+                            Sem planejamento, você não tem controle sobre seu próprio dinheiro, não sabe para onde seus
+                            recursos vão ou vêm, e, principalmente, maior dificuldade para realizar seus sonhos de
+                            consumo. Nesse artigo, te mostraremos os principais pontos para se levar em conta para criar
+                            um bom planejamento que permita você ter controle maior sobre seu dinheiro, independente do
+                            tanto que tem.</p><br><br>
 
-                        <p><ol>
+                        <p>
+                        <ol>
                             <li><b>Orçamento Pessoal</b></li>
-                            <p>Mesmo que possa soar bobo à primeira vista, fazer um orçamento pessoal, isto é, uma planilha ou lugar em geral no qual você escreve todo dinheiro que entra e sai de sua conta corrente, é necessário. Você precisa saber o quanto está gastando e com o quê está gastando para não se perder. O importante é perceber quando o dinheiro está acabando e se previnir de antemão, perceber gastos supérfluos e cortar luxos podem realmente te salvar num aperto.<br>Aplicativos como o Excel, <a href="https://docs.google.com/spreadsheets/u/0/">Google Sheets</a>, alguns especializados como o <a href="https://www.organizze.com.br/">Organizze</a> ou até mesmo um caderno e caneta podem ajudar muito com seu orçamento pessoal. Começe o seu orçamento se você já não tem um!</p><br><br>
+                            <p>Mesmo que possa soar bobo à primeira vista, fazer um orçamento pessoal, isto é, uma
+                                planilha ou lugar em geral no qual você escreve todo dinheiro que entra e sai de sua
+                                conta corrente, é necessário. Você precisa saber o quanto está gastando e com o quê está
+                                gastando para não se perder. O importante é perceber quando o dinheiro está acabando e
+                                se previnir de antemão, perceber gastos supérfluos e cortar luxos podem realmente te
+                                salvar num aperto.<br>Aplicativos como o Excel, <a
+                                    href="https://docs.google.com/spreadsheets/u/0/">Google Sheets</a>, alguns
+                                especializados como o <a href="https://www.organizze.com.br/">Organizze</a> ou até mesmo
+                                um caderno e caneta podem ajudar muito com seu orçamento pessoal. Começe o seu orçamento
+                                se você já não tem um!</p><br><br>
 
                             <li><b>Distribuição de gastos</b></li>
-                            <p>Saber onde usar seu dinheiro também é bem importante. Uma das regras mais populares é a regra do 50/30/20: <br><div class="cardimgcontainer"><img src="assets/images/pie1.png" width="350px"><br><p>Seguindo esta regra, você separa 50% do seu salário (após taxas) para gastos indispensáveis (água, alimentação luz, aluguel...), 30% para desejos temporários (sair com amigos, pagar assinaturas...) e 20% para serem armazenados, de preferência em uma poupança, para ajudar a pagar um futuro sonho ou ter uma segurança em caso de emergências.</p></div>
-                            <br> Outra regra similar é a do 70/20/10: <div class="cardimgcontainer"><img src="assets/images/pie2.png" width="320px"><p>Essa regra tem uma teoria diferente: 70% do seu dinheiro deve de fato ser usado, gastando-o tanto com desejos quanto com despesas fixas; 20% deve ser usado para economia, ou seja, guardar o dinheiro em uma poupança para caso de emergências; e 10% deve ser usado para investir, seja em programas como o Tesouro Direto, ou até mais arriscados como bolsas de valores. Essa regra visa mais ao lucro, sempre usando uma pequena parte para investir. Se o seu objetivo é crescer seu capital, essa regra se adequa mais a você.
-                            </p></div><br><br>
-                            
+                            <p>Saber onde usar seu dinheiro também é bem importante. Uma das regras mais populares é a
+                                regra do 50/30/20: <br>
+                            <div class="cardimgcontainer"><img src="assets/images/pie1.png" width="350px"><br>
+                                <p>Seguindo esta regra, você separa 50% do seu salário (após taxas) para gastos
+                                    indispensáveis (água, alimentação luz, aluguel...), 30% para desejos temporários
+                                    (sair com amigos, pagar assinaturas...) e 20% para serem armazenados, de preferência
+                                    em uma poupança, para ajudar a pagar um futuro sonho ou ter uma segurança em caso de
+                                    emergências.</p>
+                            </div>
+                            <br> Outra regra similar é a do 70/20/10: <div class="cardimgcontainer"><img
+                                    src="assets/images/pie2.png" width="320px">
+                                <p>Essa regra tem uma teoria diferente: 70% do seu dinheiro deve de fato ser usado,
+                                    gastando-o tanto com desejos quanto com despesas fixas; 20% deve ser usado para
+                                    economia, ou seja, guardar o dinheiro em uma poupança para caso de emergências; e
+                                    10% deve ser usado para investir, seja em programas como o Tesouro Direto, ou até
+                                    mais arriscados como bolsas de valores. Essa regra visa mais ao lucro, sempre usando
+                                    uma pequena parte para investir. Se o seu objetivo é crescer seu capital, essa regra
+                                    se adequa mais a você.
+                                </p>
+                            </div><br><br>
+
                             <li><b>Construção de Reserva de Emergência</b></li>
-                            <p>Com a instabilidade do mundo de hoje, é muito bom ter uma reserva de emergência. Especialistas dizem que você deveria tentar construir, em uma poupança, o valor equivalente a 5 ou 6 meses de dívidas. Por exemplo:
-                                <br>Digamos que você tenha um salário de <b>R$10,00</b>. Você gasta <b>R$5,00</b> com despesas fixas, sobrando <b>R$5,00</b> por mês. Desses <b>R$5,00</b>, você guarda, durante 2 anos, <b>R$2,00</b>/mês.<br> Após 2 anos, você tem <b>R$48,00</b> guardados para emergências. <br>Por acaso, o seu carro quebrou, e você não consegue ir trabalhar se não pagar o conserto de <b>R$25,00</b> do carro. Se você não estivesse, durante todo esse tempo, guardando dinheiro, você precisaria de <b>5 salários</b> para pagar o conserto do carro. Mas, com a poupança, você pode imediatamente consertar o carro e ainda ter <b>R$28,00</b> sobrando. <br> O ponto chave é: você nunca sabe quando esses imprevistos vão acontecer. Então, é sábio guardar dinheiro. <br><br>
+                            <p>Com a instabilidade do mundo de hoje, é muito bom ter uma reserva de emergência.
+                                Especialistas dizem que você deveria tentar construir, em uma poupança, o valor
+                                equivalente a 5 ou 6 meses de dívidas. Por exemplo:
+                                <br>Digamos que você tenha um salário de <b>R$10,00</b>. Você gasta <b>R$5,00</b> com
+                                despesas fixas, sobrando <b>R$5,00</b> por mês. Desses <b>R$5,00</b>, você guarda,
+                                durante 2 anos, <b>R$2,00</b>/mês.<br> Após 2 anos, você tem <b>R$48,00</b> guardados
+                                para emergências. <br>Por acaso, o seu carro quebrou, e você não consegue ir trabalhar
+                                se não pagar o conserto de <b>R$25,00</b> do carro. Se você não estivesse, durante todo
+                                esse tempo, guardando dinheiro, você precisaria de <b>5 salários</b> para pagar o
+                                conserto do carro. Mas, com a poupança, você pode imediatamente consertar o carro e
+                                ainda ter <b>R$28,00</b> sobrando. <br> O ponto chave é: você nunca sabe quando esses
+                                imprevistos vão acontecer. Então, é sábio guardar dinheiro. <br><br>
                             </p>
+                            </p>
+                        </ol>
+                        <p>
+                            Em resumo, saber onde vai e de onde vem o seu dinheiro, saber como aplicar o que vocë tem e
+                            estar preparado para imprevistos futuros vão tirar muito estresse da sua cabeça.
+                            Certifique-se de sempre planejar antes, não se deixando levar por precipitação ou ansiedade.
                         </p>
-                        </ol><p>
-                            Em resumo, saber onde vai e de onde vem o seu dinheiro, saber como aplicar o que vocë tem e estar preparado para imprevistos futuros vão tirar muito estresse da sua cabeça. Certifique-se de sempre planejar antes, não se deixando levar por precipitação ou ansiedade.
                         </p>
-                    </p>
                     </section>
                 </div>
             </div>
@@ -154,31 +244,56 @@
                 <div class=" modal">
                     <div class="closeButtonContainer">
                         <div class="closeButton" onclick="toggleModal('credito-e-debito')">
-                            <img src="assets/images/close.png"> 
+                            <img src="assets/images/close.png">
                         </div>
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
                         <h1 id="maintitle">Diferenças entre Crédito e Débito</h1>
-                         <p>Uma das coisas mais cruciais de saber quando se quer aprender sobre finanças é a diferença entre <b>Débito e Crédito.</b><br>
+                        <p>Uma das coisas mais cruciais de saber quando se quer aprender sobre finanças é a diferença
+                            entre <b>Débito e Crédito.</b><br>
 
-                            De acordo com o <a href="https://blog.pagseguro.uol.com.br/debito-e-credito-diferencas/" target="_blank">PagBank,</a> os cartões de débito e crédito são dois dos meios de pagamento mais utilizados no Brasil. No entanto, você sabe como cada um funciona e qual é a melhor opção para cada situação?
-                            Segundo a pesquisa “<a href="https://www.bcb.gov.br/content/cedulasemoedas/pesquisabrasileirodinheiro/Apresentacao_brasileiro_relacao_dinheiro_2024.pdf" target="_blank">O Brasileiro e sua Relação com o Dinheiro”</a>, realizada pelo Banco Central no final de 2024, o cartão de débito é usado por 69,1% da população, enquanto o cartão de crédito é a escolha de 51,6% dos brasileiros.</p><br><br>
+                            De acordo com o <a href="https://blog.pagseguro.uol.com.br/debito-e-credito-diferencas/"
+                                target="_blank">PagBank,</a> os cartões de débito e crédito são dois dos meios de
+                            pagamento mais utilizados no Brasil. No entanto, você sabe como cada um funciona e qual é a
+                            melhor opção para cada situação?
+                            Segundo a pesquisa “<a
+                                href="https://www.bcb.gov.br/content/cedulasemoedas/pesquisabrasileirodinheiro/Apresentacao_brasileiro_relacao_dinheiro_2024.pdf"
+                                target="_blank">O Brasileiro e sua Relação com o Dinheiro”</a>, realizada pelo Banco
+                            Central no final de 2024, o cartão de débito é usado por 69,1% da população, enquanto o
+                            cartão de crédito é a escolha de 51,6% dos brasileiros.</p><br><br>
 
-                        <p><ol>
+                        <p>
+                        <ol>
                             <li><b>Cartão de Crédito</b></li>
-                            <p>O cartão de crédito é o pagamento que acontence depois, ou seja o valor das compras se acumulam para pagar no vencimento do cartão, por exemplo, se você fazer uma compra de 500 reais com a data de vencimento do cartão para o dia 15, o dinheiro da compra será cobrado só nesse dia, e também há a possibilidade de parcelar a sua compra "Mas como assim parcelar ?". A parcela é nada mais nada menos do que você dividir o valor pela quantidade de meses até você pagar, por exemplo: eu parcelo uma compra de 1000 reais em 5 vezes, durante 5 meses eu vou pagar 1000 dividido por 5 que é 200 reais, ou seja, pagarei 200 reais por mês durante 5 meses</p><br><br>
+                            <p>O cartão de crédito é o pagamento que acontence depois, ou seja o valor das compras se
+                                acumulam para pagar no vencimento do cartão, por exemplo, se você fazer uma compra de
+                                500 reais com a data de vencimento do cartão para o dia 15, o dinheiro da compra será
+                                cobrado só nesse dia, e também há a possibilidade de parcelar a sua compra "Mas como
+                                assim parcelar ?". A parcela é nada mais nada menos do que você dividir o valor pela
+                                quantidade de meses até você pagar, por exemplo: eu parcelo uma compra de 1000 reais em
+                                5 vezes, durante 5 meses eu vou pagar 1000 dividido por 5 que é 200 reais, ou seja,
+                                pagarei 200 reais por mês durante 5 meses</p><br><br>
 
-                        <li><b>Cartão de Débito</b></li>
-                            <p>O débito é uma forma de pagamento à vista onde o valor da compra é descontado diretamente do saldo disponível na conta bancária do consumidor. Funciona como um pagamento em dinheiro, mas de forma eletrônica, sem necessidade de notas físicas. Para exemplificar, imagine que você tem R$ 500,00 em sua conta bancária e faz uma compra de R$ 100,00 no débito. No momento da transação, o valor é imediatamente descontado da sua conta, deixando um saldo de R$ 400,00. Caso não haja saldo suficiente, a compra será recusada.
+                            <li><b>Cartão de Débito</b></li>
+                            <p>O débito é uma forma de pagamento à vista onde o valor da compra é descontado diretamente
+                                do saldo disponível na conta bancária do consumidor. Funciona como um pagamento em
+                                dinheiro, mas de forma eletrônica, sem necessidade de notas físicas. Para exemplificar,
+                                imagine que você tem R$ 500,00 em sua conta bancária e faz uma compra de R$ 100,00 no
+                                débito. No momento da transação, o valor é imediatamente descontado da sua conta,
+                                deixando um saldo de R$ 400,00. Caso não haja saldo suficiente, a compra será recusada.
                             </p><br><br>
-                            
-                        </ol><p>
-                         <h2>Em resumo:</h2>
-                            Use débito para evitar gastos excedentes e manter o controle financeiro - ideal para o dia a dia.<br>
-                            Use crédito com responsabilidade: serve para compras maiores, parcelar gastos ou ganhar benefícios, mas se usado sem planejamento pode gerar dívidas com juros que, ao longo prazo, podem ser horríveis..
+
+                        </ol>
+                        <p>
+                        <h2>Em resumo:</h2>
+                        Use débito para evitar gastos excedentes e manter o controle financeiro - ideal para o dia a
+                        dia.<br>
+                        Use crédito com responsabilidade: serve para compras maiores, parcelar gastos ou ganhar
+                        benefícios, mas se usado sem planejamento pode gerar dívidas com juros que, ao longo prazo,
+                        podem ser horríveis..
                         </p>
-                    </p>
+                        </p>
                     </section>
                 </div>
             </div>
@@ -187,12 +302,79 @@
                 <div class=" modal">
                     <div class="closeButtonContainer">
                         <div class="closeButton" onclick="toggleModal('golpes')">
-                            <img src="assets/images/close.png"> 
+                            <img src="assets/images/close.png">
                         </div>
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
                         <h1 id="maintitle">Os perigos dos golpes</h1>
+                        <p>Os golpes são crimes que usam engenharia social (técnicas de manipulação e convencimento) para enganarpessoas e obter ganhos financeiros, roubando dinheiro, dados pessoais ou identidade, geralmente por meio online como WhatsApp.<br>
+                        Os tópicos que serão abordados são:<b> Principais golpes e Como se proteger dos golpes</b>
+                        </p><br><br>
+
+                        <p>
+                        <ol>
+                            <li><b>Principais golpes</b></li>
+                            <p><b>Golpe do Falso Boleto</b>: O criminoso envia um boleto falso, com dados da vítima, por
+                                e-mail, SMS ou WhatsApp, e o dinheiro da cobrança vai para os golpistas. <br>
+                                <b>Golpe do Pix e do WhatsApp Clonado</b>: Os golpistas clonam o WhatsApp e pedem
+                                dinheiro para amigos e familiares, usando uma história de emergência.
+                                <br>
+                                <b>Golpe do Falso Investimento</b>: Apresentando-se como especialista, o criminoso
+                                oferece investimentos com alta rentabilidade (como as pirâmides financeiras) e rouba o
+                                dinheiro da vítima, de acordo com o Conta Azul.
+                                <br>
+                                <b>Golpe da Falsa Central de Atendimento</b>: A vítima recebe um contato telefônico de
+                                um suposto funcionário de banco ou empresa, que solicita dados pessoais e financeiros,
+                                ou até pede que faça transferências para "resolver" um problema.
+                                <br>
+                                <b>Golpe do Empréstimo</b>:Criminosos atraem pessoas precisando de dinheiro rápido para
+                                aplicar o golpe, cobrando taxas antecipadas por empréstimos inexistentes, conforme o <a
+                                    href="https://www.bancobmg.com.br/blog/dicas-de-seguranca/golpe-do-emprestimo-conheca-8-tipos-e-saiba-como-se-proteger/"
+                                    target="_blank">Banco Bmg</a>.
+                            </p><br><br>
+
+                            <li><b>Como se proteger dos golpes</b></li>
+                            <p><b>Verifique o Remetente</b>: Desconfie de mensagens e boletos inesperados. Entre em
+                                contato com a empresa ou banco pelos seus canais oficiais (site ou app) para confirmar a
+                                legitimidade.
+                                <br>
+                                <b>Não Clique em Links Suspeitos</b>: Evite clicar em links e baixar anexos de e-mails,
+                                SMS ou WhatsApp, pois podem conter vírus ou direcionar para sites de phishing.
+                                <br>
+                                <b>Proteja seus Dados Pessoais</b>: Nunca compartilhe códigos de segurança (como o de
+                                verificação do WhatsApp) com ninguém, nem mesmo supostos funcionários.
+                                <br>
+                                <b>Ative a Verificação em Duas Etapas</b>: Ative essa função no seu WhatsApp para
+                                adicionar uma camada extra de segurança à sua conta, de acordo com o <a
+                                    href="https://www.spcbrasil.com.br/blog/golpe-do-pix" target="_blank">SPC
+                                    Brasil</a>.
+                                <br>
+                                <b>Cuidado com Ofertas Irrecusáveis</b>: Desconfie de ofertas muito vantajosas, que
+                                parecem boas demais para ser verdade.
+                            </p><br><br>
+
+                        </ol>
+                        <p>
+                        <h2>Em resumo:</h2>
+                        Golpes de dinheiro são crimes que utilizam engenharia social, técnicas de manipulação e
+                        convencimento, para enganar pessoas e obter vantagens financeiras, como o roubo de dinheiro,
+                        dados pessoais ou identidade. Entre os mais comuns estão o golpe do Pix e do WhatsApp clonado,
+                        em que os criminosos se passam por amigos ou familiares em situação de emergência para pedir
+                        transferências; o golpe do falso boleto, em que um documento adulterado é enviado por e-mail,
+                        SMS ou WhatsApp, e o pagamento é desviado para a conta dos golpistas; o golpe do falso
+                        investimento, onde criminosos prometem alta rentabilidade, muitas vezes com esquemas de
+                        pirâmide; o golpe da falsa central de atendimento, em que a vítima é enganada por alguém se
+                        passando por funcionário de banco ou empresa, solicitando dados ou transferências; e o golpe do
+                        empréstimo falso, no qual os golpistas cobram taxas antecipadas por um empréstimo que nunca será
+                        liberado. Para se proteger, é essencial desconfiar de mensagens inesperadas, verificar boletos e
+                        informações por canais oficiais, não clicar em links suspeitos, nunca compartilhar códigos de
+                        segurança (como o do WhatsApp), ativar a verificação em duas etapas e desconfiar de ofertas com
+                        promessas muito vantajosas. Essas práticas ajudam a evitar prejuízos e garantem mais segurança
+                        nas interações digitais.
+                        </p>
+                        <img src="assets/images/veia-top.png" alt="Uma veia top mandando joinha">
+                        </p>
                     </section>
                 </div>
             </div>
@@ -201,7 +383,7 @@
                 <div class="modal">
                     <div class="closeButtonContainer">
                         <div class="closeButton" onclick="toggleModal('criptomoedas')">
-                            <img src="assets/images/close.png"> 
+                            <img src="assets/images/close.png">
                         </div>
                     </div>
                     <section class="textholder">
@@ -215,7 +397,7 @@
                 <div class="modal">
                     <div class="closeButtonContainer">
                         <div class="closeButton" onclick="toggleModal('investimentos')">
-                            <img src="assets/images/close.png"> 
+                            <img src="assets/images/close.png">
                         </div>
                     </div>
                     <section class="textholder">
@@ -226,12 +408,13 @@
             </div>
 
         </div>
-        
+
     </main>
 
     <footer>
         <div class="footercontainer" id="footertext">
-            Essa página está licenciada sob Atribuição-Uso não-comercial 3.0 Brasil. <br>Não use esse site para fins comerciais.
+            Essa página está licenciada sob Atribuição-Uso não-comercial 3.0 Brasil. <br>Não use esse site para fins
+            comerciais.
         </div>
         <div class="footercontainer" id="footerbuttons">
             <a href="#">Sobre</a>
@@ -242,4 +425,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

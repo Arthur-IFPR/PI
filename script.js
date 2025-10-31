@@ -1,7 +1,7 @@
 let darkmode = false;
 const modals = document.querySelectorAll(".modal")
 function toggleDarkMode() {
-    const elements = document.querySelectorAll(".darkable")    
+    const elements = document.querySelectorAll(".darkable")
 
     const sun = document.getElementById("sun");
     const moon = document.getElementById("moon");
@@ -57,7 +57,7 @@ function toggleLanguageDisplay() {
 // traduções
 const translations = {
     english: {
-        title:  "Financial Consciousness",
+        title: "Financial Consciousness",
         textOne: "We at financi.guru want the principles of financial education to be available to everyone.",
         textTwo: "In such a complicated world, filled with malice and scams that try to take away your money, it is vital to know how to deal with dangers that can harm you financially.",
         fraseEfeito: "If you want to learn how to do so, you've come to the right place.",
@@ -80,7 +80,7 @@ const translations = {
             "Investing"
         ]
     },
-    
+
     spanish: {
         title: "Conciencia financiera",
         textOne: "En financi.guru queremos que los principios de la educación financiera estén disponibles para todos, los necesiten o no.",
@@ -109,7 +109,7 @@ const translations = {
         title: "Consciência Financeira",
         textOne: "Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.",
         textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
-        fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo",
+        fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo.",
         cardOneTitle: "Como derrotar o consumismo",
         precardText: "Confira os nossos tópicos",
         cardSmallTitles: [
@@ -142,32 +142,51 @@ const cardSmallTitles = document.querySelectorAll('.card-small-title');
 const cardInsideTitles = document.querySelectorAll('#maintitle');
 
 function translate(language) {
-        title.innerHTML = translations[language].title;
+    title.innerHTML = translations[language].title;
 
-        paragraphs[0].innerText = translations[language].textOne;
-        paragraphs[1].innerText = translations[language].textTwo;
+    paragraphs[0].innerText = translations[language].textOne;
+    paragraphs[1].innerText = translations[language].textTwo;
 
-        titles[1].innerText = translations[language].cardOneTitle;
+    titles[1].innerText = translations[language].cardOneTitle;
 
-        fraseDeEfeito.innerText = translations[language].fraseEfeito;
-        precard.innerText = translations[language].precardText;
+    fraseDeEfeito.innerText = translations[language].fraseEfeito;
+    precard.innerText = translations[language].precardText;
 
-        let i = 0;
-        cardSmallTitles.forEach(element => {
-            element.innerText = translations[language].cardSmallTitles[i];
-            i++;
-        })
+    let i = 0;
+    cardSmallTitles.forEach(element => {
+        element.innerText = translations[language].cardSmallTitles[i];
+        i++;
+    });
 
-        let j = 0;
-        cardInsideTitles.forEach(element => {
-            element.innerText = translations[language].cardTitles[j];
-            j++;
-        })
+    let j = 0;
+    cardInsideTitles.forEach(element => {
+        element.innerText = translations[language].cardTitles[j];
+        j++;
+    })
 }
 
-const inglesButao = document.querySelector("#ingles")
-const espanholButao = document.querySelector("#espanhol")
-const portuguesButao = document.querySelector("#portugues")
+// function attachTextToCards(language) {
+//     const cards = document.querySelectorAll('.card');
+
+//     let asdfghjkln = 0;
+//     let shouldIRemoveTitlesAsTheyAppear = false;
+//     cards.forEach((card) => {
+//         const width = card.clientWidth;
+
+//         const cardTitle = card.querySelector('p');
+
+//         cardTitle.style.position = "relative"
+//         cardTitle.style.left = `${width - cardTitle.innerText.length}`;
+//         cardTitle.style.zIndex = 99999999999
+
+//         cardTitle.textContent = `${translations[language].cardSmallTitles[asdfghjkln]}`;
+//         asdfghjkln++;
+//     })
+// }
+
+const inglesButao = document.querySelector("#ingles");
+const espanholButao = document.querySelector("#espanhol");
+const portuguesButao = document.querySelector("#portugues");
 
 inglesButao.addEventListener('click', () => {
     translate("english")
@@ -177,4 +196,26 @@ espanholButao.addEventListener('click', () => {
 })
 portuguesButao.addEventListener('click', () => {
     translate("portuguese")
+})
+
+// header estiloso por dani
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const headerElements = header.querySelectorAll('header > *');
+    const AUMENTO = 1.15;
+    if (window.scrollY <= 0) {
+        header.style.height = `90px`
+        headerElements.forEach(element => {
+            element.style.transform = `scale(${AUMENTO})`;
+            element.style.transition = `0.5s ease-out`;
+        })
+    } else {
+        header.style.height = `52px`
+        headerElements.forEach(element => {
+            element.style.transform = `scale(1)`;
+            element.style.transformOrigin = `center`;
+            element.style.transition = `0.5s ease-out`;
+            
+        })
+    }
 })
