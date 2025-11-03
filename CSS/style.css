@@ -39,7 +39,7 @@ header {
     /* boss' note: you're fired */
     /* mas esse aqui eu deixo */
     width: 100%;
-    height: 72px;
+    height: 90px;
     background-color: black;
     color: white;
     display: flex;
@@ -52,6 +52,10 @@ header {
     position: sticky;
     top: 0.01px;
     transition: 0.3s ease-out;
+}
+
+header > * {
+    transform: scale(1.1);
 }
 
 header>div,
@@ -518,4 +522,57 @@ footer div {
     color: white;
     text-decoration: none;
     text-align: start;
+}
+
+@media (max-width: 600px) {
+    body {
+        max-width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100vw;
+        flex-direction: column;
+        height: fit-content;
+        gap: 15px;
+
+        position: fixed;
+        top: 0;
+    }
+
+    .navbuttons {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .darkmode {
+        align-self: center;
+        width: fit-content;
+    }
+
+    .logo {
+        margin-top: 25px;
+        width: fit-content;
+        order: -1;
+    }
+
+    .logoimage {
+        height: 50px;
+    }
+
+    .introimg {
+        display: none !important;
+    }
+
+    * {
+        border: 1px solid red;
+    }
+
+    footer {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
 }

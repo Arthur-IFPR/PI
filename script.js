@@ -1,5 +1,5 @@
 let darkmode = false;
-const modals = document.querySelectorAll(".modal")
+const modals = document.querySelectorAll(".modal");
 function toggleDarkMode() {
     const elements = document.querySelectorAll(".darkable")
 
@@ -44,7 +44,7 @@ function toggleLanguageDisplay() {
         langContent.style.animation = "dropDown 0.5s reverse";
         langContent.addEventListener('animationend', () => {
             langContent.classList.add('hide');
-        }, {once: true})
+        }, { once: true })
     } else {
         langContent.style.animation = "none"
         langContent.offsetWidth;
@@ -199,23 +199,51 @@ portuguesButao.addEventListener('click', () => {
 })
 
 // header estiloso por dani
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const headerElements = header.querySelectorAll('header > *');
-    const AUMENTO = 1.15;
-    if (window.scrollY <= 0) {
-        header.style.height = `90px`
-        headerElements.forEach(element => {
-            element.style.transform = `scale(${AUMENTO})`;
-            element.style.transition = `0.5s ease-out`;
-        })
-    } else {
-        header.style.height = `52px`
-        headerElements.forEach(element => {
-            element.style.transform = `scale(1)`;
-            element.style.transformOrigin = `center`;
-            element.style.transition = `0.5s ease-out`;
-            
-        })
-    }
-})
+if (window.innerWidth >= 600) {
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        const headerElements = header.querySelectorAll('header > *');
+        const AUMENTO = 1.1;
+
+        if (window.scrollY <= 0) {
+            header.style.height = `90px`
+            headerElements.forEach(element => {
+                element.style.transform = `scale(${AUMENTO})`;
+                element.style.transition = `0.5s ease-out`;
+            })
+        } else {
+            header.style.height = `52px`
+            headerElements.forEach(element => {
+                element.style.transform = `scale(1)`;
+                element.style.transformOrigin = `center`;
+                element.style.transition = `0.5s ease-out`;
+            })
+        }
+    })
+} else {
+    console.log('small screen');
+    console.log('screen width: ' + window.innerWidth)
+    window.addEventListener('scroll', () => {
+        console.log('i\'m scrolling it')
+        const header = document.querySelector('header');
+        const headerElements = header.querySelectorAll('header > *');
+        const AUMENTO = 1.1;
+
+        if (window.scrollY <= 0) {
+            console.log('on top')
+            header.style.height = `fit-content`;
+            headerElements.forEach(element => {
+                element.classList.remove('hide');
+            })
+            header.querySelector('.logo').style.height = `20px`;
+        } else {
+            console.log('on bottom')
+            header.style.height = `52px`
+            headerElements.forEach(element => {
+                if (!element.className.includes('hide')) {
+                    element.classList.add('hide');
+                }
+            })
+        }
+    })
+}
