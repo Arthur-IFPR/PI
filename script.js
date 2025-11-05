@@ -199,51 +199,56 @@ portuguesButao.addEventListener('click', () => {
 })
 
 // header estiloso por dani
-if (window.innerWidth >= 600) {
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        const headerElements = header.querySelectorAll('header > *');
-        const AUMENTO = 1.1;
+const header = document.querySelector('header');
+const logo = header.querySelector('.logoimage');
+const headerElements = header.querySelectorAll('header > *');
 
-        if (window.scrollY <= 0) {
-            header.style.height = `90px`
-            headerElements.forEach(element => {
-                element.style.transform = `scale(${AUMENTO})`;
-                element.style.transition = `0.5s ease-out`;
-            })
-        } else {
-            header.style.height = `52px`
-            headerElements.forEach(element => {
-                element.style.transform = `scale(1)`;
-                element.style.transformOrigin = `center`;
-                element.style.transition = `0.5s ease-out`;
-            })
-        }
-    })
-} else {
-    console.log('small screen');
-    console.log('screen width: ' + window.innerWidth)
-    window.addEventListener('scroll', () => {
-        console.log('i\'m scrolling it')
-        const header = document.querySelector('header');
-        const headerElements = header.querySelectorAll('header > *');
-        const AUMENTO = 1.1;
-
-        if (window.scrollY <= 0) {
-            console.log('on top')
-            header.style.height = `fit-content`;
-            headerElements.forEach(element => {
-                element.classList.remove('hide');
-            })
-            header.querySelector('.logo').style.height = `20px`;
-        } else {
-            console.log('on bottom')
-            header.style.height = `52px`
-            headerElements.forEach(element => {
-                if (!element.className.includes('hide')) {
-                    element.classList.add('hide');
-                }
-            })
-        }
-    })
+function handleScrollSmall() {
+    if (window.scrollY <= 0) {
+        header.style.height = `auto`;
+        headerElements.forEach(el => el.classList.remove('hide'));
+        logo.style.height = `50px`;
+    } else {
+        header.style.height = `52px`;
+        headerElements.forEach(el => {
+            if (!el.className.includes('logo')) el.classList.add('hide');
+        });
+        logo.style.height = `30px`;
+    }
 }
+
+function handleScrollLarge() {
+    const AUMENTO = 1.1;
+    if (window.scrollY <= 0) {
+        header.style.height = `90px`;
+        headerElements.forEach(el => {
+            el.style.transform = `scale(${AUMENTO})`;
+            el.style.transition = `0.5s ease-out`;
+        });
+    } else {
+        header.style.height = `52px`;
+        headerElements.forEach(el => {
+            el.style.transform = `scale(1)`;
+            el.style.transition = `0.5s ease-out`;
+        });
+    }
+}
+
+// Detecta largura da tela dinamicamente
+const mediaQuery = window.matchMedia('(max-width: 600px)');
+
+function updateScrollHandler(e) {
+    window.removeEventListener('scroll', handleScrollSmall);
+    window.removeEventListener('scroll', handleScrollLarge);
+    if (e.matches) {
+        window.addEventListener('scroll', handleScrollSmall);
+        console.log('Modo mobile ativo');
+    } else {
+        window.addEventListener('scroll', handleScrollLarge);
+        console.log('Modo desktop ativo');
+    }
+}
+
+mediaQuery.addEventListener('change', updateScrollHandler);
+
+updateScrollHandler(mediaQuery);

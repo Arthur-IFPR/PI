@@ -35,9 +35,8 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     /* sets font to Arial, but if there is no Arial we use Helvetica but if Helvetica is not available we use sans */
     /* reviewer's note: SANS????? */
-    /* commenter's note: the word sans in french stands for without, as in, without serif meaning sans serif, serif is the fancy curly stuff that some fonts have, meaning sans serif has no serif beacuse it is sans serif meaning no serif is inserted in the font sans serif */
+    /* commenter's note: the word sans in french stands for without, as in without serif meaning sans serif, serif is the fancy curly stuff that some fonts have, meaning sans serif has no serif beacuse it is sans serif meaning no serif is inserted in the font sans serif */
     /* boss' note: you're fired */
-    /* mas esse aqui eu deixo */
     width: 100%;
     height: 90px;
     background-color: black;
@@ -55,7 +54,7 @@ header {
 }
 
 header > * {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 header>div,
@@ -69,7 +68,21 @@ header>nav {
 }
 
 .navbuttons {
-    text-align: end;
+    text-align: end; /* quem fez isso. */
+}
+
+.navbuttons > #language, .githublogo {
+    border-radius: 15px;
+}
+
+.navbuttons > #language:hover, .githublogo:hover {
+    transform: scale(1.05);
+    background-color: hsla(0, 0%, 40%, 0.6);
+}
+
+.navbuttons > a {
+    text-decoration: none;
+    display: inline-block;
 }
 
 #langbtn {
@@ -532,47 +545,64 @@ footer div {
     }
 
     header {
-        width: 100vw;
-        flex-direction: column;
-        height: fit-content;
-        gap: 15px;
-
         position: fixed;
-        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0px 10px 0px;
+        transition: height 0.4s ease;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: -1;
+    }
+
+    .darkmode {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: fit-content;
+    }
+
+    .logoimage {
+        width: auto;
+        height: 50px;
+        object-fit: contain;
+        transition: height 0.4s ease;
     }
 
     .navbuttons {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
         width: 100%;
     }
 
-    .darkmode {
-        align-self: center;
-        width: fit-content;
-    }
-
-    .logo {
-        margin-top: 25px;
-        width: fit-content;
-        order: -1;
-    }
-
-    .logoimage {
-        height: 50px;
+    .navbuttons a img,
+    .navbuttons button img {
+        width: 35px;
+        height: 35px;
     }
 
     .introimg {
         display: none !important;
     }
 
-    * {
-        border: 1px solid red;
-    }
-
     footer {
         height: fit-content;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
+
+
 }
