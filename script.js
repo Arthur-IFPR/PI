@@ -204,16 +204,20 @@ const logo = header.querySelector('.logoimage');
 const headerElements = header.querySelectorAll('header > *');
 
 function handleScrollSmall() {
+    const intro = document.querySelector('.intro');
     if (window.scrollY <= 0) {
+ 
         header.style.height = `auto`;
         headerElements.forEach(el => el.classList.remove('hide'));
         logo.style.height = `50px`;
+        intro.style.marginTop = `120px`
     } else {
         header.style.height = `52px`;
         headerElements.forEach(el => {
             if (!el.className.includes('logo')) el.classList.add('hide');
         });
         logo.style.height = `30px`;
+        intro.style.marginTop = `60px`
     }
 }
 
@@ -234,13 +238,12 @@ function handleScrollLarge() {
     }
 }
 
-// Detecta largura da tela dinamicamente
 const mediaQuery = window.matchMedia('(max-width: 600px)');
 
 function updateScrollHandler(e) {
     window.removeEventListener('scroll', handleScrollSmall);
     window.removeEventListener('scroll', handleScrollLarge);
-    if (e.matches) {
+    if (e) {
         window.addEventListener('scroll', handleScrollSmall);
         console.log('Modo mobile ativo');
     } else {
