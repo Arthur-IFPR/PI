@@ -39,14 +39,14 @@ const langContent = document.querySelector(".lang-content");
 let isLangOpen = false;
 function toggleLanguageDisplay() {
     if (isLangOpen) {
-        langContent.style.animation = "none"
+        langContent.style.animation = "none";
         langContent.offsetWidth;
         langContent.style.animation = "dropDown 0.5s reverse";
         langContent.addEventListener('animationend', () => {
             langContent.classList.add('hide');
         }, { once: true })
     } else {
-        langContent.style.animation = "none"
+        langContent.style.animation = "none";
         langContent.offsetWidth;
         langContent.style.animation = "dropDown 0.5s forwards";
         langContent.classList.remove('hide');
@@ -63,6 +63,8 @@ const translations = {
         fraseEfeito: "If you want to learn how to do so, you've come to the right place.",
         cardOneTitle: "How to defeat consumerism",
         precardText: "Check out our topics",
+        clickToAccess: "Click a card to access its content",
+        // linha 67 haha
         cardSmallTitles: [
             "Consumerism",
             "Planning",
@@ -87,6 +89,7 @@ const translations = {
         textTwo: "En un mundo tan complejo, lleno de estafas y planes maliciosos que intentan robarte tu dinero, es muy importante saber cómo lidiar con los peligros que podrían acabar perjudicándote financieramente.",
         fraseEfeito: "Si necesitas aprender cómo hacer esto, estás en el lugar correcto.",
         precardText: "Confere nuestros temas",
+        clickToAccess: "Haz clic en una tarjeta para ver su contenido",
         cardSmallTitles: [
             "Consumismo",
             "Planificación",
@@ -110,8 +113,8 @@ const translations = {
         textOne: "Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.",
         textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
         fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo.",
-        cardOneTitle: "Como derrotar o consumismo",
         precardText: "Confira os nossos tópicos",
+        clickToAccess: "Clique em um cartão para acessar seu conteúdo",
         cardSmallTitles: [
             "Consumismo",
             "Planejamento",
@@ -132,71 +135,40 @@ const translations = {
     }
 }
 
-const title = document.querySelector("#titulo");
-const paragraphs = document.querySelectorAll("p");
-const titles = document.querySelectorAll("h1");
-const fraseDeEfeito = document.querySelector("#frasedeefeito");
-const precard = document.querySelector(".precard-text");
-
-const cardSmallTitles = document.querySelectorAll('.card-small-title');
-const cardInsideTitles = document.querySelectorAll('#maintitle');
-
 function translate(language) {
-    title.innerHTML = translations[language].title;
+    const elementsToTranslate = document.querySelectorAll('[data-tk]');
+    const translationSet = translations[language];
 
-    paragraphs[0].innerText = translations[language].textOne;
-    paragraphs[1].innerText = translations[language].textTwo;
+    elementsToTranslate.forEach(element => {
+        const keyWithIndex = element.getAttribute('data-tk');
+        let text = '';
 
-    titles[1].innerText = translations[language].cardOneTitle;
+        if (keyWithIndex.includes(':')) {
+            const [arrayKey, indexString] = keyWithIndex.split(':');
+            const index = parseInt(indexString, 10);
 
-    fraseDeEfeito.innerText = translations[language].fraseEfeito;
-    precard.innerText = translations[language].precardText;
+            if (translationSet[arrayKey] && Array.isArray(translationSet[arrayKey])) {
+                text = translationSet[arrayKey][index];
+            }
+        } else if (keyWithIndex.includes('.')) {
+            text = keyWithIndex.split('.').reduce((obj, k) => obj[k], translationSet);
+        } else {
+            text = translationSet[keyWithIndex];
+        }
 
-    let i = 0;
-    cardSmallTitles.forEach(element => {
-        element.innerText = translations[language].cardSmallTitles[i];
-        i++;
+        if (text) {
+            element.innerText = text;
+        }
     });
-
-    let j = 0;
-    cardInsideTitles.forEach(element => {
-        element.innerText = translations[language].cardTitles[j];
-        j++;
-    })
 }
+const pButton = document.querySelector('#portugues');
+const iButton = document.querySelector('#ingles');
+const eButton = document.querySelector('#espanhol');
+// 167
 
-// function attachTextToCards(language) {
-//     const cards = document.querySelectorAll('.card');
-
-//     let asdfghjkln = 0;
-//     let shouldIRemoveTitlesAsTheyAppear = false;
-//     cards.forEach((card) => {
-//         const width = card.clientWidth;
-
-//         const cardTitle = card.querySelector('p');
-
-//         cardTitle.style.position = "relative"
-//         cardTitle.style.left = `${width - cardTitle.innerText.length}`;
-//         cardTitle.style.zIndex = 99999999999
-
-//         cardTitle.textContent = `${translations[language].cardSmallTitles[asdfghjkln]}`;
-//         asdfghjkln++;
-//     })
-// }
-
-const inglesButao = document.querySelector("#ingles");
-const espanholButao = document.querySelector("#espanhol");
-const portuguesButao = document.querySelector("#portugues");
-
-inglesButao.addEventListener('click', () => {
-    translate("english")
-})
-espanholButao.addEventListener('click', () => {
-    translate("spanish")
-})
-portuguesButao.addEventListener('click', () => {
-    translate("portuguese")
-})
+pButton.addEventListener('click', () => { translate('portuguese') })
+iButton.addEventListener('click', () => { translate('english') })
+eButton.addEventListener('click', () => { translate('spanish') })
 
 // header estiloso por dani
 const header = document.querySelector('header');
@@ -243,7 +215,7 @@ const mediaQuery = window.matchMedia('(max-width: 600px)');
 function updateScrollHandler(e) {
     window.removeEventListener('scroll', handleScrollSmall);
     window.removeEventListener('scroll', handleScrollLarge);
-    if (e) {
+    if (e.matches) {
         window.addEventListener('scroll', handleScrollSmall);
         console.log('Modo mobile ativo');
     } else {

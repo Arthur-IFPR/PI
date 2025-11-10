@@ -594,8 +594,23 @@ footer div {
 
     .introimg {
         align-self: center;
-        width: 100vw !important;
+        width: 90vw !important;
         height: fit-content;
+    }
+
+    main {
+        max-width: 100vw;
+        min-width: 100vw;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #click-to-access {
+        max-width: 60vw;
+        text-align: center;
+        align-self: center;
     }
 
     .introimg > img {
@@ -618,19 +633,21 @@ footer div {
     }
 
     .cards {
-        border: 1px solid green;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .cards-1 {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .cards-2 {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     footer {
@@ -639,6 +656,15 @@ footer div {
         flex-direction: column;
         align-items: center;
         text-align: center;
+
+        gap: 15px;
     }
 
+    #footerbuttons {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    
+        margin-bottom: 20px;
+    }
 }

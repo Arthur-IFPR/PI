@@ -14,7 +14,7 @@
         <div class="darkmode">
             <img src="assets/images/sun.svg" alt="sun" width="30px" id="sun" draggable="false">
             <label class="switch">
-                <!-- darkmode é a classe da div do cabeçalho. "switch" é a classe do botão e "darkmodeslider" é o visual do botão. -->
+
                 <input type="checkbox" onclick="toggleDarkMode()">
                 <span class="darkmodeslider"></span>
             </label>
@@ -33,15 +33,15 @@
                 <div class="lang-content hide">
                     <div id="portugues">
                         <img src="assets/images/flag-br.png" width="20px">
-                        <a href="#"> Português</a>
+                        <a href="#">Português</a>
                     </div>
                     <div id="ingles">
                         <img src="assets/images/flag-us.png" width="20px">
-                        <a href="#"> Inglês</a>
+                        <a href="#">English</a>
                     </div>
                     <div id="espanhol">
                         <img src="assets/images/flag-es.png" width="20px">
-                        <a href="#"> Espanhol</a>
+                        <a href="#">Español</a>
                     </div>
                 </div>
             </button>
@@ -51,43 +51,45 @@
     <main>
         <div class="intro" style="color: black;">
             <div class="introtext">
-                <h1 id="titulo">Consciência Financeira</h1><br>
-                <p id="p1">Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a
+                <h1 id="titulo" data-tk="title">Consciência Financeira</h1><br>
+                <p id="p1" data-tk="textOne">Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a
                     todos.
                 </p><br>
-                <p id="p2">Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito
+                <p id="p2" data-tk="textTwo">Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito
                     importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.</p>
-                <p><i id="frasedeefeito">Se precisa aprender a fazer isso, você está no lugar certo.</i></p>
+                <p><i id="frasedeefeito" data-tk="fraseEfeito">Se precisa aprender a fazer isso, você está no lugar certo.</i></p>
             </div>
             <div class="introimg">
-                <img src="https://cdni.iconscout.com/illustration/premium/thumb/happy-piggy-bank-illustration-download-in-svg-png-gif-file-formats--saving-future-savings-save-centry-pack-business-illustrations-5408295.png?f=webp" alt="porco">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/happy-piggy-bank-illustration-download-in-svg-png-gif-file-formats--saving-future-savings-save-centry-pack-business-illustrations-5408295.png?f=webp"
+                    alt="porco">
             </div>
         </div>
 
-        <h2 class="precard-text">Confira os nossos tópicos</h2>
-        <h4 id="click-to-access">Clique em um cartão para acessar seu conteúdo</h4>
+        <h2 class="precard-text" data-tk="precardText">Confira os nossos tópicos</h2>
+        <h4 id="click-to-access" data-tk="clickToAccess">Clique em um cartão para acessar seu conteúdo</h4>
         <div class="cards darkable">
             <div class="cards-1">
                 <div class="card"><img id="consumismo" src="assets/images/card-consumismo.svg">
-                    <p class="card-small-title">Consumismo</p>
+                    <p class="card-small-title" data-tk="cardSmallTitles:0">Consumismo</p>
                 </div>
                 <div class="card"><img src="assets/images/card-planejamento.svg" id="planejamento">
-                    <p class="card-small-title">Planejamento</p>
+                    <p class="card-small-title" data-tk="cardSmallTitles:1">Planejamento</p>
                 </div>
                 <div class="card"><img id="credito-e-debito" src="assets/images/card-credito-debito.svg">
-                    <p class="card-small-title">Crédito e Débito</p>
+                    <p class="card-small-title"
+                    data-tk="cardSmallTitles:2">Crédito e Débito</p>
                 </div>
             </div>
 
             <div class="cards-2">
                 <div class="card"><img src="assets/images/card-golpes.svg" id="golpes">
-                    <p class="card-small-title">Golpes</p>
+                    <p class="card-small-title" data-tk="cardSmallTitles:3">Golpes</p>
                 </div>
                 <div class="card"><img src="assets/images/card-criptomoedas.svg" id="criptomoedas ">
-                    <p class="card-small-title">Criptomoedas</p>
+                    <p class="card-small-title" data-tk="cardSmallTitles:4">Criptomoedas</p>
                 </div>
                 <div class="card"><img src="assets/images/card-investimentos.svg" id="investimentos ">
-                    <p class="card-small-title">Investimentos</p>
+                    <p class="card-small-title" data-tk="cardSmallTitles:5">Investimentos</p>
                 </div>
             </div>
         </div>
@@ -102,7 +104,7 @@
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
-                        <h1 id="maintitle">Como derrotar o Consumismo</h1>
+                        <h1 id="maintitle" data-tk="cardTitles:0">Como derrotar o Consumismo</h1>
                         <p id="textconsumismo1">Você já se viu comprando mais do que o necessário? Gastando muito
                             dinheiro com coisas desnecessárias? Pois é. Isso se chama <b>Consumismo.</b></p>
                         <p>De acordo como o dicionário <a href="https://languages.oup.com/" target="_blank">Oxford
@@ -110,7 +112,7 @@
                                 demasia."</i>. É o ato de comprar ou consumir demais, muitas vezes por impulso, o que
                             não é necessário. Nesse pequeno artigo, iremos aprender como não cair no consumismo e como
                             desviar de suas armadilhas que podem até te colocar em dívidas.</p><br><br>
-                        <ol>
+                        <ol id="textconsumismo2">
                             <li><b>Compras por impulso</b></li>
                             <p>Compras que são feitas sem muita reflexão ou que são feitas de imediato muitas vezes
                                 levam a consumismo e perda de dinheiro. Principalmente em lojas e mercados, os produtos
@@ -120,7 +122,7 @@
                                 supermercado é capaz de ativar liberação de dopamina em excesso e um despertar de
                                 ansiedade do tipo "se eu não comprar, vou me arrepender" ou "essa promoção pode nunca
                                 mais voltar".</p>
-                            <p>Tome cuidado com as promoções, principalmente em feriados e festividades. As lojas não
+                            <p">Tome cuidado com as promoções, principalmente em feriados e festividades. As lojas não
                                 seriam bobas o suficiente para perder dinheiro: elas sabem que com promoções, elas
                                 lucram.</p><br><br>
                             <li><b>Compras de mercado</b></li>
@@ -167,7 +169,7 @@
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
-                        <h1 id="maintitle">Planejamentos</h1>
+                        <h1 id="maintitle" data-tk="cardTitles:1">Planejamentos</h1>
                         <p>Sem dúvidas, um dos passos mais vitais para uma vida financeira bem sucedida é o
                             <b>Planejamento.</b><br>
 
@@ -175,7 +177,8 @@
                             recursos vão ou vêm, e, principalmente, maior dificuldade para realizar seus sonhos de
                             consumo. Nesse artigo, te mostraremos os principais pontos para se levar em conta para criar
                             um bom planejamento que permita você ter controle maior sobre seu dinheiro, independente do
-                            tanto que tem.</p><br><br>
+                            tanto que tem.
+                        </p><br><br>
 
                         <p>
                         <ol>
@@ -248,7 +251,7 @@
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
-                        <h1 id="maintitle">Diferenças entre Crédito e Débito</h1>
+                        <h1 id="maintitle" data-tk="cardTitles:2">Diferenças entre Crédito e Débito</h1>
                         <p>Uma das coisas mais cruciais de saber quando se quer aprender sobre finanças é a diferença
                             entre <b>Débito e Crédito.</b><br>
 
@@ -306,9 +309,11 @@
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
-                        <h1 id="maintitle">Os perigos dos golpes</h1>
-                        <p>Os golpes são crimes que usam engenharia social (técnicas de manipulação e convencimento) para enganarpessoas e obter ganhos financeiros, roubando dinheiro, dados pessoais ou identidade, geralmente por meio online como WhatsApp.<br>
-                        Os tópicos que serão abordados são:<b> Principais golpes e Como se proteger dos golpes</b>
+                        <h1 id="maintitle" data-tk="cardTitles:3">Os perigos dos golpes</h1>
+                        <p>Os golpes são crimes que usam engenharia social (técnicas de manipulação e convencimento)
+                            para enganarpessoas e obter ganhos financeiros, roubando dinheiro, dados pessoais ou
+                            identidade, geralmente por meio online como WhatsApp.<br>
+                            Os tópicos que serão abordados são:<b> Principais golpes e Como se proteger dos golpes</b>
                         </p><br><br>
 
                         <p>
@@ -372,7 +377,7 @@
                         promessas muito vantajosas. Essas práticas ajudam a evitar prejuízos e garantem mais segurança
                         nas interações digitais.
                         </p>
-                        <img src="assets/images/veia-top.png" alt="Uma veia top mandando joinha">
+                        <img src="assets/images/veia-top.png" alt="Uma veia top mandando joinha"></img>
                         </p>
                     </section>
                 </div>
@@ -387,7 +392,9 @@
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
-                        <h1 id="maintitle">Criptomoedas</h1>
+                        <h1 id="maintitle" data-tk="cardTitles:4">Criptomoedas</h1>
+
+
                     </section>
                 </div>
             </div>
@@ -401,7 +408,8 @@
                     </div>
                     <section class="textholder">
                         <img class="modalcard" src="assets/images/card.svg" alt="card">
-                        <h1 id="maintitle">Investimentos</h1>
+                        <h1 id="maintitle" data-tk="cardTitles:5">Investimentos</h1>
+
                     </section>
                 </div>
             </div>
