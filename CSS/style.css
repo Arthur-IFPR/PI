@@ -6,13 +6,18 @@
     padding: 0px;
 }
 
-body { 
+body {
     overflow-x: hidden;
 }
 
 @keyframes goFromRightToLeft {
-    0% { transform: translateX(500px); }
-    100% { transform: translateX(0px); }
+    0% {
+        transform: translateX(500px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 /* dark-mode */
@@ -25,7 +30,6 @@ body {
 .darkable {
     transition: 0.2s;
 }
-
 
 .hide {
     display: none !important;
@@ -53,7 +57,7 @@ header {
     transition: 0.3s ease-out;
 }
 
-header > * {
+header>* {
     transform: scale(1.05);
 }
 
@@ -68,19 +72,22 @@ header>nav {
 }
 
 .navbuttons {
-    text-align: end; /* quem fez isso. */
+    text-align: end;
+    /* quem fez isso. */
 }
 
-.navbuttons > #language, .githublogo {
+.navbuttons>#language,
+.githublogo {
     border-radius: 15px;
 }
 
-.navbuttons > #language:hover, .githublogo:hover {
+.navbuttons>#language:hover,
+.githublogo:hover {
     transform: scale(1.05);
     background-color: hsla(0, 0%, 40%, 0.6);
 }
 
-.navbuttons > a {
+.navbuttons>a {
     text-decoration: none;
     display: inline-block;
 }
@@ -90,13 +97,13 @@ header>nav {
     margin-left: 20px;
 }
 
-.dropdown-button{
+.dropdown-button {
     padding: 0rem;
     border: none;
     background-color: black;
 }
 
-.dropdown-content{
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: crimson;
@@ -107,9 +114,8 @@ header>nav {
     gap: 10px;
 }
 
-#lang-pt{
+#lang-pt {
     color: crimson;
-
 }
 
 .dropdown-button:hover {
@@ -119,7 +125,7 @@ header>nav {
 .dropdown-button:hover .dropdown-content {
     display: flex;
     flex-direction: column;
-} 
+}
 
 .switch {
     position: relative;
@@ -152,7 +158,7 @@ header>nav {
     bottom: 0;
     background-color: #ccc;
     transition: 0.5s;
-    -webkit-transition: .4s;
+    -webkit-transition: 0.4s;
     border-radius: 20px;
 }
 
@@ -179,16 +185,27 @@ input:checked+.darkmodeslider:before {
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes dropDown {
-    0% { transform: translateX(200px); }
-    100% { transform: translateX(0px); }
+    0% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
-#sun, #moon {
+#sun,
+#moon {
     position: absolute;
 
     user-select: none;
@@ -223,7 +240,7 @@ input:checked+.darkmodeslider:before {
 /* Texto-introdução */
 
 .intro {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial;
     width: 100%;
     min-height: 320px;
     background: linear-gradient(to left, rgb(129, 255, 129), rgb(54, 252, 54));
@@ -333,7 +350,7 @@ input:checked+.darkmodeslider:before {
     transform: scale(1.1);
 }
 
-.card > p {
+.card>p {
     position: absolute;
     top: 54px;
 }
@@ -371,7 +388,6 @@ input:checked+.darkmodeslider:before {
     height: 100vh;
 }
 
-
 .modal {
     min-height: 450px;
     min-width: 500px;
@@ -386,7 +402,7 @@ input:checked+.darkmodeslider:before {
     background-color: #ffffff;
 
     padding: 2rem;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.2s ease-in-out;
 }
 
 .dark-modal {
@@ -469,7 +485,7 @@ footer div {
 
 #maintitle {
     font-size: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     position: relative;
     bottom: 30px;
@@ -504,7 +520,6 @@ footer div {
     border: none;
     cursor: pointer;
     position: relative;
-
 }
 
 .lang-content {
@@ -512,7 +527,7 @@ footer div {
     min-width: 100px;
     z-index: 1;
     background-color: #494949;
-    
+
     right: -50px;
     top: 40px;
 
@@ -523,15 +538,15 @@ footer div {
     justify-content: flex-start;
 }
 
-.lang-content > div {
+.lang-content>div {
     padding: 15px 0px 15px 0px;
 }
 
-.lang-content > div:hover {
+.lang-content>div:hover {
     background-color: #444444;
 }
 
-.lang-content > div > a {
+.lang-content>div>a {
     color: white;
     text-decoration: none;
     text-align: start;
@@ -613,7 +628,7 @@ footer div {
         align-self: center;
     }
 
-    .introimg > img {
+    .introimg>img {
         text-align: center;
         width: 30%;
     }
@@ -622,7 +637,7 @@ footer div {
         margin-top: 120px;
 
         width: 100vw;
-        
+
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -642,12 +657,14 @@ footer div {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        z-index: 4;
     }
 
     .cards-2 {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        z-index: 4;
     }
 
     footer {
@@ -664,7 +681,88 @@ footer div {
         display: flex;
         flex-direction: column;
         gap: 3px;
-    
+
         margin-bottom: 20px;
+    }
+
+    .closeButtonContainer {
+        position: fixed;
+        z-index: 8910989198;
+    }
+
+    .closeButton {
+        z-index: inherit;
+    }
+
+    .closeButton > img {
+        z-index: inherit;
+    }   
+
+    .modals {
+        pointer-events: none;
+        margin: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        position: fixed;
+
+        box-sizing: border-box;
+        
+    }
+
+    .modal-background {
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+
+        margin: 0;
+    }
+
+    .lang-content > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lang-content>div>a {
+        display: inline-block;
+
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        
+        height: 100%;
+    }
+
+    .modal {box-sizing: border-box;
+        pointer-events: all;
+        z-index: 999;
+        width: 100% !important;
+        height: 95vh !important;
+
+        min-width: 0 !important;
+        min-height: 0 !important;
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        overflow-y: scroll;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 5px 5px 30px 5px;
+    }
+
+    .textholder {
+        width: 100%;
+        min-height: 100%;
+
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }

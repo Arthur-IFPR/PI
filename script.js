@@ -1,3 +1,5 @@
+const mediaQuery = window.matchMedia('(max-width: 600px)');
+
 let darkmode = false;
 const modals = document.querySelectorAll(".modal");
 function toggleDarkMode() {
@@ -7,7 +9,6 @@ function toggleDarkMode() {
     const moon = document.getElementById("moon");
 
     elements.forEach(element => {
-        const currentClass = element.className
         element.classList.toggle('dark-mode')
     });
 
@@ -30,7 +31,15 @@ cards.forEach(element => {
 })
 
 function toggleModal(cardTopic) {
+    const header = document.querySelector('header');
+    if (!header.classList.contains('hide') && mediaQuery.matches) {
+        header.classList.add('hide');
+    } else {
+        header.classList.remove('hide');
+    }
+
     const modal = document.querySelector(`#card-${cardTopic}`);
+    console.log(modal)
     modal.classList.toggle('hide-modal');
 }
 
@@ -63,8 +72,8 @@ const translations = {
         fraseEfeito: "If you want to learn how to do so, you've come to the right place.",
         cardOneTitle: "How to defeat consumerism",
         precardText: "Check out our topics",
-        clickToAccess: "Click a card to access its content",
         // linha 67 haha
+        clickToAccess: "Click a card to access its content",
         cardSmallTitles: [
             "Consumerism",
             "Planning",
@@ -210,7 +219,6 @@ function handleScrollLarge() {
     }
 }
 
-const mediaQuery = window.matchMedia('(max-width: 600px)');
 
 function updateScrollHandler(e) {
     window.removeEventListener('scroll', handleScrollSmall);
