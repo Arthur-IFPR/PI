@@ -1,3 +1,21 @@
+// olá! seja bem vindo ao pior código escrito por três babuínos que não
+// sabiam o que estavam fazendo.
+// Caso esteja tendo alguma dificuldade com código mal escrito, avise os
+// futuros desenvolvedores, e incremente este contador:
+// total_de_problemas_com_codigo_ruim = 9
+//
+// boa sorte!
+
+/*
+    guia para tradução:
+    -> adicione um data-attribute 'data-tk' no elemento (de preferência, o elemento imediato, não algum pai)
+    -> no valor de data-tk, use:
+        --- data-tk="chave" para chave simples (e.g. fraseDeEfeito: "Se você quer blablablá");
+        --- data-tk="chave:[index]" para propriedades que contém um array (e.g. cardSmallTitles: ["consumismo", "comunismo"])
+        --- data-tk="chave.propriedade" para objetos (provavelmente não vai ser necessário)
+
+    -> evite usar innerHTML, vai estragar mais ainda! use textContent
+*/
 const mediaQuery = window.matchMedia('(max-width: 600px)');
 
 let darkmode = false;
@@ -68,7 +86,7 @@ const translations = {
     english: {
         title: "Financial Consciousness",
         textOne: "We at financi.guru want the principles of financial education to be available to everyone.",
-        textTwo: "In such a complicated world, filled with malice and scams that try to take away your money, it is vital to know how to deal with dangers that can harm you financially.",
+        textTwo: "In such a complicated world, filled with malice and scams that try to take away your money, it's vital to know how to deal with dangers that can harm you financially.",
         fraseEfeito: "If you want to learn how to do so, you've come to the right place.",
         cardOneTitle: "How to defeat consumerism",
         precardText: "Check out our topics",
@@ -77,7 +95,7 @@ const translations = {
         cardSmallTitles: [
             "Consumerism",
             "Planning",
-            "Credit & Debit",
+            "Credit & Debit cards",
             "Scams",
             "Cryptocurrency",
             "Investing"
@@ -85,7 +103,7 @@ const translations = {
         cardTitles: [
             "How to defeat consumerism",
             "Planning",
-            "Difference between credit & debit",
+            "Differences between credit & debit",
             "The dangers of scams",
             "Cryptocurrency",
             "Investing"
@@ -233,5 +251,4 @@ function updateScrollHandler(e) {
 }
 
 mediaQuery.addEventListener('change', updateScrollHandler);
-
 updateScrollHandler(mediaQuery);
