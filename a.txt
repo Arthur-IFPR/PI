@@ -1,0 +1,273 @@
+document.addEventListener('DOMContentLoaded', setup);
+
+// guarda estado global
+let mediaQuery;
+let translations;
+let darkmode = false;
+let isLangOpen = false;
+
+function setup() {
+    mediaQuery = window.matchMedia('(max-width: 600px)');
+
+    translations = {
+        english: { /* ... exatamente igual ao seu ... */ },
+        spanish: { /* ... */ },
+        portuguese: { /* ... */ }
+    };
+
+    // primeira configuração
+    attachEventListeners();
+
+    // configura scroll responsivo
+    mediaQuery.addEventListener('change', updateScrollHandler);
+    updateScrollHandler(mediaQuery);
+}
+
+/* -------------------------------------------------------------------------- */
+/* EVENTOS → tudo que é listener fica isolado aqui                            */
+/* -------------------------------------------------------------------------- */
+
+function attachEventListeners() {
+    // DARK MODE --------------------------------------------------------------
+    const themeButton = document.querySelector('#darkmode-toggle');
+    if (themeButton) themeButton.addEventListener('click', toggleDarkMode);
+
+    // CARDS / MODALS ----------------------------------------------------------
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener('click', e => toggleModal(e.target.id));
+    });
+
+    // IDIOMAS --------------------------------------------------------------
+    const pButton = document.querySelector('#portugues');
+    const iButton = document.querySelector('#ingles');
+    const eButton = document.querySelector('#espanhol');
+
+    if (pButton) pButton.addEventListener('click', () => applyTranslations('portuguese'));
+    if (iButton) iButton.addEventListener('click', () => applyTranslations('english'));
+    if (eButton) eButton.addEventListener('click', () => applyTranslations('spanish'));
+
+    // MENU DE IDIOMA --------------------------------------------------------
+    const langToggle = document.querySelector('#toggle-lang');
+    if (langToggle) langToggle.addEventListener('click', toggleLanguageDisplay);
+
+    // SCROLL (mobile x desktop) ---------------------------------------------
+    updateScrollHandler(mediaQuery);
+}
+
+/* -------------------------------------------------------------------------- */
+/* FUNÇÕES PRINCIPAIS                                                         */
+/* -------------------------------------------------------------------------- */
+
+function toggleDarkMode() {
+    const elements = document.querySelectorAll(".darkable");
+    const modals = document.querySelectorAll(".modal");
+    const sun = document.getElementById("sun");
+    const moon = document.getElementById("moon");
+
+    elements.forEach(el => el.classList.toggle('dark-mode'));
+    modals.forEach(el => el.classList.toggle('dark-modal'));
+
+    darkmode = !darkmode;
+
+    if (sun) sun.classList.toggle('hide');
+    if (moon) moon.classList.toggle('hide');
+}
+
+function toggleModal(cardTopic) {
+    const header = document.querySelector('header');
+    const modal = document.querySelector(`#card-${cardTopic}`);
+
+    if (!modal) return;
+
+    if (!header.classList.contains('hide') && mediaQuery.matches) {
+        header.classList.add('hide');
+    } else {
+        header.classList.remove('hide');
+    }
+
+    modal.classList.toggle('hide-modal');
+}
+
+function toggleLanguageDisplay() {
+    const langContent = document.querySelector(".lang-content");
+    if (!langContent) return;
+
+    if (isLangOpen) {
+        langContent.style.animation = "none";
+        langContent.offsetWidth;
+        langContent.style.animation = "dropDown 0.5s reverse";
+        langContent.addEventListener('animationend', () => {
+            langContent.classList.add('hide');
+        }, { once: true })
+    } else {
+        langContent.style.animation = "none";
+        langContent.offsetWidth;
+        langContent.style.animation = "dropDown 0.5s forwards";
+        langContent.classList.remove('hide');
+    }
+
+    isLangOpen = !isLangOpen;
+}
+
+/* -------------------------------------------------------------------------- */
+/* TRADUÇÃO                                                                   */
+/* -------------------------------------------------------------------------- */
+
+function applyTranslations(language) {
+    const translationSet = translations[language];
+    const elements = document.querySelectorAll('[data-tk]');
+
+    elements.forEach(el => {
+        const key = el.getAttribute('data-tk');
+        let text = '';
+
+        if (key.includes(':')) {
+            const [k, i] = key.split(':');
+            const index = parseInt(i, 10);
+            if (Array.isArray(translationSet[k])) text = translationSet[k][index];
+        } else if (key.includes('.')) {
+            text = key.split('.').reduce((obj, part) => obj[part], translationSet);
+        } else {
+            text = translationSet[key];
+        }
+
+        if (text) el.textContent = text;
+    });
+}
+
+/* -------------------------------------------------------------------------- */
+/* SCROLL (mobile / desktop)                                                  */
+/* -------------------------------------------------------------------------- */
+
+function updateScrollHandler(e) {
+    window.removeEventListener('scroll', handleScrollSmall);
+    window.removeEventListener('scroll', handleScrollLarge);
+
+    if (e.matches) {
+        window.addEventListener('scroll', handleScrollSmall);
+    } else {
+        window.addEventListener('scroll', handleScrollLarge);
+    }
+}
+
+function handleScrollSmall() {
+    const header = document.querySelector('header');
+    const intro = document.querySelector('.intro');
+    const logo = document.querySelector('.logoimage');
+    const elements = header.querySelectorAll('header > *');
+
+    if (window.scrollY <= 0) {
+        header.style.height = "auto";
+        elements.forEach(el => el.classList.remove('hide'));
+        logo.style.height = `50px`;
+        intro.style.marginTop = `120px`;
+    } else {
+        header.style.height = "52px";
+        elements.forEach(el => {
+            if (!el.className.includes('logo')) el.classList.add('hide');
+        });
+        logo.style.height = `30px`;
+        intro.style.marginTop = `60px`;
+    }
+}
+
+function handleScrollLarge() {
+    const header = document.querySelector('header');
+    const logo = document.querySelector('.logoimage');
+    const elements = header.querySelectorAll('header > *');
+    const AUMENTO = 1.1;
+
+    if (window.scrollY <= 0) {
+        header.style.height = `90px`;
+        elements.forEach(el => {
+            el.style.transform = `scale(${AUMENTO})`;
+            el.style.transition = `0.5s ease-out`;
+        });
+    } else {
+        header.style.height = `52px`;
+        elements.forEach(el => {
+            el.style.transform = `scale(1)`;
+            el.style.transition = `0.5s ease-out`;
+        });
+    }
+}
+
+const translations = {
+        english: {
+            title: "Financial Consciousness",
+            textOne: "We at financi.guru want the principles of financial education to be available to everyone.",
+            textTwo: "In such a complicated world, filled with malice and scams that try to take away your money, it's vital to know how to deal with dangers that can harm you financially.",
+            fraseEfeito: "If you want to learn how to do so, you've come to the right place.",
+            cardOneTitle: "How to defeat consumerism",
+            precardText: "Check out our topics",
+            // linha 67 haha
+            clickToAccess: "Click a card to access its content",
+            cardSmallTitles: [
+                "Consumerism",
+                "Planning",
+                "Credit & Debit cards",
+                "Scams",
+                "Cryptocurrency",
+                "Investing"
+            ],
+            cardTitles: [
+                "How to defeat consumerism",
+                "Planning",
+                "Differences between credit & debit",
+                "The dangers of scams",
+                "Cryptocurrency",
+                "Investing"
+            ]
+        },
+
+        spanish: {
+            title: "Conciencia financiera",
+            textOne: "En financi.guru queremos que los principios de la educación financiera estén disponibles para todos, los necesiten o no.",
+            textTwo: "En un mundo tan complejo, lleno de estafas y planes maliciosos que intentan robarte tu dinero, es muy importante saber cómo lidiar con los peligros que podrían acabar perjudicándote financieramente.",
+            fraseEfeito: "Si necesitas aprender cómo hacer esto, estás en el lugar correcto.",
+            precardText: "Confere nuestros temas",
+            clickToAccess: "Haz clic en una tarjeta para ver su contenido",
+            cardSmallTitles: [
+                "Consumismo",
+                "Planificación",
+                "Credito y Debito",
+                "Estafas",
+                "Criptomonedas",
+                "Inversiones"
+            ],
+            cardTitles: [
+                "Cómo vencer el consumismo",
+                "Planificacíon",
+                "Diferencia entre crédito y débito",
+                "Los peligros de las estafas",
+                "Critpomonedas",
+                "Inversiones"
+            ]
+        },
+
+        portuguese: {
+            title: "Consciência Financeira",
+            textOne: "Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.",
+            textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
+            fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo.",
+            precardText: "Confira os nossos tópicos",
+            clickToAccess: "Clique em um cartão para acessar seu conteúdo",
+            cardSmallTitles: [
+                "Consumismo",
+                "Planejamento",
+                "Crédito e Débito",
+                "Golpes",
+                "Criptomoedas",
+                "Investimentos"
+            ],
+            cardTitles: [
+                "Como derrotar o consumismo",
+                "Investimentos",
+                "Diferenças entre Crédito e Débito",
+                "Os perigos dos golpes",
+                "Criptomoedas",
+                "Investimento"
+            ],
+
+        }
+    }
