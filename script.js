@@ -60,66 +60,80 @@ function setup() {
                 p8: "This rule has a different philosophy: 70% of your money goes to essential expenses (this includes vanities as well), 20% to savings, and the remaining 10% would be invested. It focuses more on financial growth by designating a portion specifically for investing, although sacrificing a bit of security. However, in the long run, this might be benefitial.",
                 p9: "Building an Emergency Fund",
                 p10: "With today's unpredictable world, it is wise to have an emergency reserve. Specialists suggest saving the equivalent of 5 or 6 months of expenses. For example: if you earn $10 and spend $5 on fixed expenses, saving $2 per month for two years results in $48 saved for emergencies.<br>The key point: you never know when unexpected events will happen, so saving is very wise.",
-                p11: "Therefore, in conclusion: knowing where your money comes from, where it goes, applying it correctly, and preparing for unexpected events greatly reduces stress. Always plan ahead, avoid acting impulsively, and be wise with what you spend on."
+                p11: "Therefore, in conclusion: knowing where your money comes from, where it goes, applying it correctly, and preparing for unexpected events greatly reduces stress. Always plan ahead, avoid acting impulsively, and be wise with what you spend on.",
+            },
+            cardThree: {
+                p1: "One of the most crucial and basic things to understand when learning about personal finance is the difference between <b>credit</b> and <b>debit</b>. According to PagBank, debit and credit cards are among the most used forms of payment in Brazil. Do you know how each one works — and which one to use in each situation?",
+
+                p2: "A survey by the Central Bank (“The Brazilian and its Relationship with Money”, 2024) revealed that 69.1% of Brazilians use debit cards, while 51.6% use credit cards. And, you'd be surprised by the amount of people that use them wrongly.",
+
+                p3: "Credit Card",
+                p4: "A credit card lets you delay payment — purchases accumulate and are charged on the card's due date. You can also use installments: for example, if you split a $1,000 purchase into five payments, you will pay $200 per month for five months (on a perfect world. credit cards always come with taxes, to some extent). <br> One more key thing is credit score - ",
+
+                p5: "Debit Card",
+                p6: "A debit card deducts the value directly from your bank account balance. It works like electronic cash.<br>For example: if you have $500 and make a $100 debit purchase, your balance becomes $400. If there isn't enough balance, the purchase is declined. This one is most ideal for immediate purchases, or cheaper ones since the payment is immediate and (mostly) tax-free.",
+
+                p7: "In summary",
+                p8: "Use <b>debit</b> to keep daily control and avoid overspending. Use <b>credit</b> responsibly: it helps with larger purchases, installments or rewards — but without planning, it can generate high-interest debt over time. However, Credit cards can also be a powerful tool, in the right hands."
             },
         },
 
         spanish: {
-            title: "Conciencia financiera",
+        title: "Conciencia financiera",
             textOne: "En financi.guru queremos que los principios de la educación financiera estén disponibles para todos, los necesiten o no.",
-            textTwo: "En un mundo tan complejo, lleno de estafas y planes maliciosos que intentan robarte tu dinero, es muy importante saber cómo lidiar con los peligros que podrían acabar perjudicándote financieramente.",
-            fraseEfeito: "Si necesitas aprender cómo hacer esto, estás en el lugar correcto.",
-            precardText: "Confere nuestros temas",
-            clickToAccess: "Haz clic en una tarjeta para ver su contenido",
-            cardSmallTitles: [
-                "Consumismo",
-                "Planificación",
-                "Credito y Debito",
-                "Estafas",
-                "Criptomonedas",
-                "Inversiones"
-            ],
-            cardTitles: [
-                "Cómo vencer el consumismo",
-                "Planificacíon",
-                "Diferencia entre crédito y débito",
-                "Los peligros de las estafas",
-                "Critpomonedas",
-                "Inversiones"
-            ]
+                textTwo: "En un mundo tan complejo, lleno de estafas y planes maliciosos que intentan robarte tu dinero, es muy importante saber cómo lidiar con los peligros que podrían acabar perjudicándote financieramente.",
+                    fraseEfeito: "Si necesitas aprender cómo hacer esto, estás en el lugar correcto.",
+                        precardText: "Confere nuestros temas",
+                            clickToAccess: "Haz clic en una tarjeta para ver su contenido",
+                                cardSmallTitles: [
+                                    "Consumismo",
+                                    "Planificación",
+                                    "Credito y Debito",
+                                    "Estafas",
+                                    "Criptomonedas",
+                                    "Inversiones"
+                                ],
+                                    cardTitles: [
+                                        "Cómo vencer el consumismo",
+                                        "Planificacíon",
+                                        "Diferencia entre crédito y débito",
+                                        "Los peligros de las estafas",
+                                        "Critpomonedas",
+                                        "Inversiones"
+                                    ]
         },
 
         portuguese: {
-            title: "Consciência Financeira",
+        title: "Consciência Financeira",
             textOne: "Nós, do financi.guru, desejamos que os princípios da educação financeira sejam disponíveis a todos.",
-            textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
-            fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo.",
-            precardText: "Confira os nossos tópicos",
-            clickToAccess: "Clique em um cartão para acessar seu conteúdo",
-            cardSmallTitles: [
-                "Consumismo",
-                "Planejamento",
-                "Crédito e Débito",
-                "Golpes",
-                "Criptomoedas",
-                "Investimentos"
-            ],
-            cardTitles: [
-                "Como derrotar o consumismo",
-                "Investimentos",
-                "Diferenças entre Crédito e Débito",
-                "Os perigos dos golpes",
-                "Criptomoedas",
-                "Investimento"
-            ],
+                textTwo: "Num mundo tão complicado, cheio de golpes e malícias que tentam roubar seu dinheiro, é muito importante saber como lidar com perigos que podem acabar te prejudicando financeiramente.",
+                    fraseEfeito: "Se precisa aprender a fazer isso, você está no lugar certo.",
+                        precardText: "Confira os nossos tópicos",
+                            clickToAccess: "Clique em um cartão para acessar seu conteúdo",
+                                cardSmallTitles: [
+                                    "Consumismo",
+                                    "Planejamento",
+                                    "Crédito e Débito",
+                                    "Golpes",
+                                    "Criptomoedas",
+                                    "Investimentos"
+                                ],
+                                    cardTitles: [
+                                        "Como derrotar o consumismo",
+                                        "Investimentos",
+                                        "Diferenças entre Crédito e Débito",
+                                        "Os perigos dos golpes",
+                                        "Criptomoedas",
+                                        "Investimento"
+                                    ],
 
         }
-    }
+}
 
-    attachEventListeners();
+attachEventListeners();
 
-    mediaQuery.addEventListener('change', updateScrollHandler);
-    updateScrollHandler(mediaQuery);
+mediaQuery.addEventListener('change', updateScrollHandler);
+updateScrollHandler(mediaQuery);
 }
 
 function attachEventListeners() {
