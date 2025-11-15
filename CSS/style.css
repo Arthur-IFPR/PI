@@ -499,7 +499,7 @@ footer div {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.textholder h1{
+.textholder h1 {
     margin-top: 55px;
 }
 
@@ -729,9 +729,9 @@ footer div {
         z-index: inherit;
     }
 
-    .closeButton > img {
+    .closeButton>img {
         z-index: inherit;
-    }   
+    }
 
     .modals {
         pointer-events: none;
@@ -743,7 +743,7 @@ footer div {
         position: fixed;
 
         box-sizing: border-box;
-        
+
     }
 
     .modal-background {
@@ -754,7 +754,7 @@ footer div {
         margin: 0;
     }
 
-    .lang-content > div {
+    .lang-content>div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -767,11 +767,12 @@ footer div {
         text-decoration: none;
         text-align: center;
         vertical-align: middle;
-        
+
         height: 100%;
     }
 
-    .modal {box-sizing: border-box;
+    .modal {
+        box-sizing: border-box;
         pointer-events: all;
         z-index: 999;
         width: 100% !important;
@@ -800,4 +801,27 @@ footer div {
         margin-top: 30px;
         margin-bottom: 30px;
     }
+}
+
+.space-list-title {
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.space-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.line-height {
+    line-height: 2rem;
+}
+
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
