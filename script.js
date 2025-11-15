@@ -68,7 +68,7 @@ function setup() {
                 p2: "A survey by the Central Bank (“The Brazilian and its Relationship with Money”, 2024) revealed that 69.1% of Brazilians use debit cards, while 51.6% use credit cards. And, you'd be surprised by the amount of people that use them wrongly.",
 
                 p3: "Credit Card",
-                p4: "A credit card lets you delay payment — purchases accumulate and are charged on the card's due date. You can also use installments: for example, if you split a $1,000 purchase into five payments, you will pay $200 per month for five months (on a perfect world. credit cards always come with taxes, to some extent). <br> One more key thing is credit score - ",
+                p4: "A credit card lets you delay payment - purchases accumulate and are charged on the card's due date. You can also use installments: for example, if you split a $1,000 purchase into five payments, you will pay $200 per month for five months (on a perfect world. credit cards always come with taxes, to some extent). <br> One more key thing is credit score - the more you pay in-due-date to your bank provider, and the less you owe them, the more credit score you'll have: usually a value between 0 and 1000, although it is subjective. Credit score allows you to get less fees when making purchases, as it shows to your bank you'll pay them back - so, if you wish to use the credit card but still don't want to use too much money, try keeping your credit score high",
 
                 p5: "Debit Card",
                 p6: "A debit card deducts the value directly from your bank account balance. It works like electronic cash.<br>For example: if you have $500 and make a $100 debit purchase, your balance becomes $400. If there isn't enough balance, the purchase is declined. This one is most ideal for immediate purchases, or cheaper ones since the payment is immediate and (mostly) tax-free.",
@@ -76,6 +76,10 @@ function setup() {
                 p7: "In summary",
                 p8: "Use <b>debit</b> to keep daily control and avoid overspending. Use <b>credit</b> responsibly: it helps with larger purchases, installments or rewards — but without planning, it can generate high-interest debt over time. However, Credit cards can also be a powerful tool, in the right hands."
             },
+            cardFour: {
+                p1: "As everyone is mostly aware, <b>Scams</b> are dirty & anti-ethical ways of taking and earning money from other poeple, most of the time using social engineering to manipulate and trick victims.",
+                p2: "With such an interconnected world and the internet becoming a fundamental part of our lives, "
+            }
         },
 
         spanish: {
