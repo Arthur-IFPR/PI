@@ -133,7 +133,27 @@ function setup() {
             footercopyright: "This page is licensed under Creative Commons Attribution-Non Commercial 3.0 Brazil. <br> Do not use this website for commercial purposes.",
             sobre: "About",
             codigofonte: "Source code",
-            creditos: "Credits"
+            creditos: "Credits",
+            footer: {
+                h1: "About our website",
+                p1: "This website initiated development in abril 2025. As assigned work from <a href=\"https://ifpr.edu.br/assis-chateaubriand/\"IFPR</a>'s Assis Chateaubriand campus, PR, financi.guru was made for the Integrater Project I (am steve) by Daniel Flowers, David Seven, and Arthur Escobar.",
+                p2: "Ever since the beninging, financial education interested (among) us a lot, and we're surprised by the amount of people that don't know the bare basics - and that's what we're trying to solve",
+                p3: "Yeah, of course, this website isn't in professional standards, however, we are very proud (we're not actually proud, shut the fuck up) of the project we've built. We hope financi.guru can serve everyone well!",
+                porquefinanciguru: "Why 'financi.guru'?",
+                esquecidessamerda: "A guru is an intellectual leader, a spiritual guide for their leig followers. And that's what financi.guru seeks to be, in the financial aspect, of course.<br>Also, it's a silly pun: 'financi.guru' might be read as 'finanseguro', which, in Portuguese, can mean 'Safe finances' (horrible translation).",
+                creditossmegma: "Credits",
+                daniel: "Daniel of Oliver Flowers",
+                danielinfo: "<li>Consumerism, Planning, Credit & Debit, and Scams cards</li><li>Translation to English (sorry)</li><li>MAJOR, ABSOLUTELY NECESSARY contrubutions to JS code (that other dawg wouldn't be no nothin without me)</li><li>Wireframe</li><li>CSS programming (html too)</li>",
+
+                arthur: "Arfer Brave Escobar",
+                arthurinfo: "<li>Cryptocoins card</li><li>Graphic desing</li><li>A big part of JS code</li><li>Translation to English too</li><li>CSS programming</li><li>Idea of this page's name</li>",
+
+                davi: "David Colanc Seven",
+                daviinfo: "<li>Translation to Español</li><li>Investments and Credit & Debit cards</li><li>Graphic Design</li><li>HTML programming</li><li>CSS programming</li>",
+
+                svgrepo: "<a href=\"https://www.svgrepo.com/\"><b>Ess Vee(ronica) Gee REPO</b></a>",
+                svgrepoinfo: "<li>Liberalyt a free imagens and pee ann gee for use in a website build</li><li>Everyone Ess Vee Gee that this page are donwloand from Ess Vee Gee repo website</li>",
+            }
         },
 
         spanish: {
